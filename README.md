@@ -1,2 +1,2 @@
-# arclos-server
-The server programs of Amateur Radio Logging System
+# yxplog-server
+QSL logging system developed by JA1YXP.

@@ -1,17 +1,17 @@
-import { Application, Router, RouterContext } from "https://deno.land/x/oak@v6.5.0/mod.ts";
+import { Application, Router, RouterContext } from "https://deno.land/x/oak@v17.1.4/mod.ts";
 
 const app = new Application();
 const router = new Router();
 
-app.addEventListener("listen", ({ hostname, port, secure }) => {
-    console.log(
-        `Listeneing on: ${secure ? "https://" : "http://"}${hostname ?? "localhost"}:${port}`,
-    );
-});
+// app.addEventListener("listen", ({ hostname, port, secure }) => {
+//     console.log(
+//         `Listeneing on: ${secure ? "https://" : "http://"}${hostname ?? "localhost"}:${port}`,
+//     );
+// });
 
-app.addEventListener("error",  (e) => {
-    console.log(e.error);
-});
+// app.addEventListener("error",  (e) => {
+//     console.log(e.error);
+// });
 
 router.get('/', (ctx: RouterContext) => {
     ctx.response.body = "Hello, World!";
@@ -32,4 +32,4 @@ router.get('/edit', (ctx: RouterContext) => {
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-await app.listen({port: 8080});
+app.listen({port: 8080});

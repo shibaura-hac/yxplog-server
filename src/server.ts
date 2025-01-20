@@ -4,5 +4,20 @@ const app = new Application();
 const router = new Router();
 
 app.addEventListener("listen", ({ hostname, port, secure }) => {
-
+    console.log(
+        `Listeneing on: ${secure ? "https://" : "http://"}${hostname ?? "localhost"}:${port}`,
+    );
 });
+
+app.addEventListener("error",  (e) => {
+    console.log(e.error);
+});
+
+router.get('/', (ctx: RouterContext) => {
+    ctx.response.body = "Hello, World!";
+});
+
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+await app.listen({port: 8080});

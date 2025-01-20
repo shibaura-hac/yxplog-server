@@ -17,6 +17,18 @@ router.get('/', (ctx: RouterContext) => {
     ctx.response.body = "Hello, World!";
 });
 
+router.get('/get', (ctx: RouterContext) => {
+    ctx.response.body = "{}";
+});
+
+router.get('/register', (ctx: RouterContext) => {
+    ctx.response.body = "{}";
+});
+
+router.get('/edit', (ctx: RouterContext) => {
+    ctx.response.body = "{}";
+});
+
 app.use(router.routes());
 app.use(router.allowedMethods());
 

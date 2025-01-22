@@ -3,9 +3,10 @@ import {
   Router,
   RouterContext,
 } from "https://deno.land/x/oak@v17.1.4/mod.ts";
+// import { Low } from "npm:lowdb";
+// import { JSONFile, JSONFilePreset } from "npm:lowdb/node";
+import { validateQSO, registerQSO } from "./utils.ts";
 
-import { Low } from "npm:lowdb";
-import { JSONFile, JSONFilePreset } from "npm:lowdb/node";
 
 const app = new Application();
 const router = new Router();
@@ -22,7 +23,7 @@ const router = new Router();
 //
 
 
-const db = await JSONFilePreset('db.json', { logs: [] })
+// const db = await JSONFilePreset('db.json', { logs: [] })
 
 
 // API Specification: https://gist.github.com/alpaca-honke/04a775060111d94ac1d0ada242471a41
@@ -47,16 +48,29 @@ router.post("/register", async (ctx: RouterContext) => {
   ctx.response.headers.set("Content-Type", "application/json");
 
   const _qso = await ctx.request.body.json();
+  const _keys_not_present = validateQSO(_qso);
+
+  if (_keys_not_present.length === 0) {
+
+    // TODO: catch database error
+    // await db.update(({ logs }) => logs.push(_qso));
+    //
+    const result = await registerQSO(_qso);
 
 
-  await db.update(({ logs }) => logs.push(_qso));
 
-  const qso = await ctx.request.body.text();
+    ctx.response.body = `{
+      "status": true,
+      "qso": ${JSON.stringify(_qso)}
+    }`;
+  } else {
+    ctx.response.body = `{
+      "status": false,
+      "message": "keys not present: ${validateQSO(_qso).join(", ")}"
+    }`;
+  }
 
-  ctx.response.body = `{
-    "status": true,
-    "qso": ${qso}
-  }`;
+
 });
 
 router.get("/edit", (ctx: RouterContext) => {

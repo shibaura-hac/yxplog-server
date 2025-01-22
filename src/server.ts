@@ -4,6 +4,9 @@ import {
   RouterContext,
 } from "https://deno.land/x/oak@v17.1.4/mod.ts";
 
+import { Low } from "npm:lowdb";
+import { JSONFile, JSONFilePreset } from "npm:lowdb/node";
+
 const app = new Application();
 const router = new Router();
 
@@ -16,24 +19,51 @@ const router = new Router();
 // app.addEventListener("error",  (e) => {
 //     console.log(e.error);
 // });
+//
+
+
+const db = await JSONFilePreset('db.json', { logs: [] })
+
+
+// API Specification: https://gist.github.com/alpaca-honke/04a775060111d94ac1d0ada242471a41
 
 router.get("/", (ctx: RouterContext) => {
   ctx.response.body = "Hello, World!";
 });
 
 router.get("/get", (ctx: RouterContext) => {
-  ctx.response.header = `{
-    "Content-Type": "application/json"
-  }`;
+  ctx.response.headers.set("Content-Type", "application/json");
   ctx.response.body = "{}";
 });
 
-router.get("/register", (ctx: RouterContext) => {
-  ctx.response.body = "{}";
+router.get("/search", (ctx: RouterContext) => {
+  ctx.response.headers.set("Content-Type", "application/json");
+  ctx.response.body = `{
+    "results": []
+  }`;
+});
+
+router.post("/register", async (ctx: RouterContext) => {
+  ctx.response.headers.set("Content-Type", "application/json");
+
+  const _qso = await ctx.request.body.json();
+
+
+  await db.update(({ logs }) => logs.push(_qso));
+
+  const qso = await ctx.request.body.text();
+
+  ctx.response.body = `{
+    "status": true,
+    "qso": ${qso}
+  }`;
 });
 
 router.get("/edit", (ctx: RouterContext) => {
-  ctx.response.body = "{}";
+  ctx.response.headers.set("Content-Type", "application/json");
+  ctx.response.body = `{
+    "status": true
+  }`;
 });
 
 app.use(router.routes());

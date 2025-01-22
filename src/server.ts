@@ -24,15 +24,23 @@ const router = new Router();
 // API Specification: https://gist.github.com/alpaca-honke/04a775060111d94ac1d0ada242471a41
 
 router.get("/", (ctx: RouterContext) => {
-  ctx.response.body = "Hello, World!";
+  ctx.response.headers.set("Content-Type", "text/plain");
+  ctx.response.body = "Welcome to YXPlog, see https://github.com/shibaura-hac/yxplog-server";
 });
 
-router.get("/get", (ctx: RouterContext) => {
+router.post("/", async (ctx: RouterContext) => {
+  ctx.response.headers.set("Content-Type", "text/plain");
+  ctx.response.body = "Welcome to YXPlog, see https://github.com/shibaura-hac/yxplog-server";
+});
+
+router.post("/get", async (ctx: RouterContext) => {
+  const requestBody = await ctx.request.body().value;
   ctx.response.headers.set("Content-Type", "application/json");
   ctx.response.body = "{}";
 });
 
-router.get("/search", (ctx: RouterContext) => {
+router.post("/search", async (ctx: RouterContext) => {
+  const requestBody = await ctx.request.body().value;
   ctx.response.headers.set("Content-Type", "application/json");
   ctx.response.body = `{
     "results": []

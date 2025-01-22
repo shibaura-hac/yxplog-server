@@ -3,8 +3,6 @@ import {
   Router,
   RouterContext,
 } from "https://deno.land/x/oak@v17.1.4/mod.ts";
-// import { Low } from "npm:lowdb";
-// import { JSONFile, JSONFilePreset } from "npm:lowdb/node";
 import { validateQSO, registerQSO } from "./utils.ts";
 
 
@@ -21,9 +19,6 @@ const router = new Router();
 //     console.log(e.error);
 // });
 //
-
-
-// const db = await JSONFilePreset('db.json', { logs: [] })
 
 
 // API Specification: https://gist.github.com/alpaca-honke/04a775060111d94ac1d0ada242471a41

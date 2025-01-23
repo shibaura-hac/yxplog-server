@@ -23,8 +23,19 @@ export function registerQSO(qso: Record<string, unknown>): Promise<boolean> {
   return db.update(({ logs }) => logs.push(qso));
 }
 
-export function searchQSO(qso: Record<string, unknown>): Promise<Record<string, unknown>> {
-  // pass the search query, return all logs that match the query
+export function editQSO(data: Record<string, unknown>): Promise<boolean> {
+  if ("id" in data && "qso" in data) {
+    const keys_missing = validateQSO(data["qso"]);
+    if (!(keys_missing.length === 0)) {
+      return {"status": false, "msg": `error: key ${keys_missing} are missing`}
+    };
+
+    const index = logs.findIndex((log) => log.id == data["id"]);
+    logs[index] = data["qso"];
+    return {"status": true, "qso": data["qso"]}
+  } else {
+    return {"status": false, "msg": "error: id or qso not provided"}
+  }
 }
 
 export function generateID(): number {
@@ -42,9 +53,9 @@ export function getLogs(options: Record<string, unknown>): Promise<Record<string
 
 export function searchLogs(options: Record<string, unknown>): Promise<Record<string, unknown>> {
   if ("callsign" in options) {
-    return logs.filter((log) => log.call.includes(options["callsign"]));
+    return {"status": true, "logs": logs.filter((log) => log.call.includes(options["callsign"]))};
   }
-  return {"error": "no search query provided"};
+  return {"status": false, "msg": "error: no search query provided"};
 }
 
 export function getQSO(timestamp: String): Promise<Record<string, unknown>> {

@@ -37,8 +37,14 @@ export function getLogs(options: Record<string, unknown>): Promise<Record<string
     const index = logs.findIndex((log) => log.id == options["id"]);
     return logs.slice(index - logs.length)
   }
-
   return logs.slice(-20);
+}
+
+export function searchLogs(options: Record<string, unknown>): Promise<Record<string, unknown>> {
+  if ("callsign" in options) {
+    return logs.filter((log) => log.call.includes(options["callsign"]));
+  }
+  return {"error": "no search query provided"};
 }
 
 export function getQSO(timestamp: String): Promise<Record<string, unknown>> {

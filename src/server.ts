@@ -3,7 +3,7 @@ import {
   Router,
   RouterContext,
 } from "https://deno.land/x/oak@v17.1.4/mod.ts";
-import { validateQSO, registerQSO, generateID, getLogs } from "./utils.ts";
+import { validateQSO, registerQSO, generateID, getLogs, searchLogs } from "./utils.ts";
 
 
 const app = new Application();
@@ -28,16 +28,14 @@ router.get("/", async (ctx: RouterContext) => {
 
 router.post("/get", async (ctx: RouterContext) => {
   const requestBody = await ctx.request.body.json();
-  ctx.response.headers.set("Content-Type", "application/json");
+  ctx.response.headers.set("Content-Typee", "application/json");
   ctx.response.body = getLogs(requestBody);
 });
 
 router.post("/search", async (ctx: RouterContext) => {
-  const requestBody = await ctx.request.body().value;
+  const requestBody = await ctx.request.body.json();
   ctx.response.headers.set("Content-Type", "application/json");
-  ctx.response.body = `{
-    "results": []
-  }`;
+  ctx.response.body = searchLogs(requestBody);
 });
 
 router.post("/register", async (ctx: RouterContext) => {

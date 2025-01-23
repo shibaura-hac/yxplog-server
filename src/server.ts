@@ -42,22 +42,30 @@ router.get("/search", (ctx: RouterContext) => {
 router.post("/register", async (ctx: RouterContext) => {
   ctx.response.headers.set("Content-Type", "application/json");
 
-  const _qso = await ctx.request.body.json();
+  let _qso = await ctx.request.body.json();
   const _keys_not_present = validateQSO(_qso);
 
   if (_keys_not_present.length === 0) {
 
     // TODO: catch database error
-    // await db.update(({ logs }) => logs.push(_qso));
-    //
+
     const result = await registerQSO(_qso);
-
-
 
     ctx.response.body = `{
       "status": true,
       "qso": ${JSON.stringify(_qso)}
     }`;
+  } else if ( _keys_not_present == "date") {
+    const today = new Date();
+    _qso.date = today.toISOString();
+
+    const result = await registerQSO(_qso);
+
+    ctx.response.body = `{
+      "status": true,
+      "qso": ${_qso.date}
+    }`;
+
   } else {
     ctx.response.body = `{
       "status": false,

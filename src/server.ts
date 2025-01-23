@@ -3,40 +3,33 @@ import {
   Router,
   RouterContext,
 } from "https://deno.land/x/oak@v17.1.4/mod.ts";
-import { validateQSO, registerQSO } from "./utils.ts";
+import { validateQSO, registerQSO, generateID, getLogs } from "./utils.ts";
 
 
 const app = new Application();
 const router = new Router();
 
-// app.addEventListener("listen", ({ hostname, port, secure }) => {
-//     console.log(
-//         `Listeneing on: ${secure ? "https://" : "http://"}${hostname ?? "localhost"}:${port}`,
-//     );
-// });
+app.addEventListener("listen", ({ hostname, port, secure }) => {
+    console.log(
+        `Listeneing on: ${secure ? "https://" : "http://"}${hostname ?? "localhost"}:${port}`,
+    );
+});
 
-// app.addEventListener("error",  (e) => {
-//     console.log(e.error);
-// });
-//
-
+app.addEventListener("error",  (e) => {
+    console.log(e.error);
+});
 
 // API Specification: https://gist.github.com/alpaca-honke/04a775060111d94ac1d0ada242471a41
 
-router.get("/", (ctx: RouterContext) => {
+router.get("/", async (ctx: RouterContext) => {
   ctx.response.headers.set("Content-Type", "text/plain");
-  ctx.response.body = "Welcome to YXPlog, see https://github.com/shibaura-hac/yxplog-server";
-});
-
-router.post("/", async (ctx: RouterContext) => {
-  ctx.response.headers.set("Content-Type", "text/plain");
-  ctx.response.body = "Welcome to YXPlog, see https://github.com/shibaura-hac/yxplog-server";
+  ctx.response.body = `Welcome to YXPlog, see https://github.com/shibaura-hac/yxplog-server`;
 });
 
 router.post("/get", async (ctx: RouterContext) => {
-  const requestBody = await ctx.request.body().value;
+  const requestBody = await ctx.request.body.json();
   ctx.response.headers.set("Content-Type", "application/json");
-  ctx.response.body = "{}";
+  ctx.response.body = getLogs(requestBody);
 });
 
 router.post("/search", async (ctx: RouterContext) => {
@@ -54,8 +47,12 @@ router.post("/register", async (ctx: RouterContext) => {
   const _keys_not_present = validateQSO(_qso);
 
   if (_keys_not_present.length === 0) {
-
     // TODO: catch database error
+
+    if (!("date" in _qso)) {
+      const today = generateID();
+      _qso.id = today;
+    }
 
     const result = await registerQSO(_qso);
 
@@ -63,28 +60,15 @@ router.post("/register", async (ctx: RouterContext) => {
       "status": true,
       "qso": ${JSON.stringify(_qso)}
     }`;
-  } else if ( _keys_not_present == "date") {
-    const today = new Date();
-    _qso.date = today.toISOString();
-
-    const result = await registerQSO(_qso);
-
-    ctx.response.body = `{
-      "status": true,
-      "qso": ${_qso.date}
-    }`;
-
   } else {
     ctx.response.body = `{
       "status": false,
-      "message": "keys not present: ${validateQSO(_qso).join(", ")}"
+      "message": "keys not present: ${_keys_not_present.join(", ")}"
     }`;
   }
-
-
 });
 
-router.get("/edit", (ctx: RouterContext) => {
+router.post("/edit", (ctx: RouterContext) => {
   ctx.response.headers.set("Content-Type", "application/json");
   ctx.response.body = `{
     "status": true

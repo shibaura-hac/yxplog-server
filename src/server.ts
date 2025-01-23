@@ -5,6 +5,7 @@ import {
 } from "https://deno.land/x/oak@v17.1.4/mod.ts";
 
 import { apiRouter } from "./api.ts";
+import { frontendRouter } from "./frontend.ts";
 
 
 const app = new Application();

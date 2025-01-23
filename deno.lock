@@ -10,6 +10,7 @@
     "jsr:@std/http@1": "1.0.12",
     "jsr:@std/media-types@1": "1.1.0",
     "jsr:@std/path@1": "1.0.8",
+    "npm:date-fns@*": "4.1.0",
     "npm:lowdb@*": "7.0.1",
     "npm:path-to-regexp@^6.3.0": "6.3.0"
   },
@@ -51,6 +52,9 @@
     }
   },
   "npm": {
+    "date-fns@4.1.0": {
+      "integrity": "sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg=="
+    },
     "lowdb@7.0.1": {
       "integrity": "sha512-neJAj8GwF0e8EpycYIDFqEPcx9Qz4GUho20jWFR7YiFeXzF1YMLdxB36PypcTSPMA+4+LvgyMacYhlr18Zlymw==",
       "dependencies": [

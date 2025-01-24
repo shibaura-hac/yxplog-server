@@ -29,56 +29,88 @@
                     <tbody id="callsign-table-body"></tbody>
                 </table>
             </div>
-            <div class="field has-addons">
-                <div class="control">
-                    <input class="input" type="text" placeholder="callsign" />
-                </div>
-                <div class="control">
-                    <div class="select is-fullwidth">
-                        <select name="band">
-                            <option value="35">3.5</option>
-                            <option value="7">7</option>
-                            <option value="14">14</option>
-                            <option value="21">21</option>
-                            <option value="28">28</option>
-                            <option value="50">50</option>
-                            <option value="144">144</option>
-                            <option value="430">430</option>
-                            <option value="1200">1200</option>
-                            <option value="2400">2400</option>
-                        </select>
+            <form id="qso_form">
+                <div class="field has-addons">
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            name="call"
+                            placeholder="callsign"
+                        />
+                    </div>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select name="band">
+                                <option value="35">3.5</option>
+                                <option value="7">7</option>
+                                <option value="14">14</option>
+                                <option value="21">21</option>
+                                <option value="28">28</option>
+                                <option value="50">50</option>
+                                <option value="144">144</option>
+                                <option value="430">430</option>
+                                <option value="1200">1200</option>
+                                <option value="2400">2400</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select name="mode">
+                                <option value="SSB">SSB</option>
+                                <option value="AM">AM</option>
+                                <option value="FM">FM</option>
+                                <option value="CW">CW</option>
+                                <option value="RTTY">RTTY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select name="pw">
+                                <option value="H">H</option>
+                                <option value="L">L</option>
+                                <option value="M">M</option>
+                                <option value="P">P</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            name="rrst"
+                            placeholder="received RST"
+                        />
+                    </div>
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            name="srst"
+                            placeholder="sent RST"
+                        />
+                    </div>
+                    <div class="control is-expanded">
+                        <input
+                            name="memo"
+                            class="input"
+                            type="text"
+                            placeholder="Memo"
+                        />
+                    </div>
+                    <div class="control">
+                        <button
+                            type="submit"
+                            class="button is-primary"
+                            id="submit_button"
+                        >
+                            Submit
+                        </button>
                     </div>
                 </div>
-                <div class="control">
-                    <div class="select is-fullwidth">
-                        <select name="band">
-                            <option value="SSB">SSB</option>
-                            <option value="AM">AM</option>
-                            <option value="FM">FM</option>
-                            <option value="CW">CW</option>
-                            <option value="RTTY">RTTY</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="control">
-                    <input
-                        class="input"
-                        type="text"
-                        placeholder="received RST"
-                    />
-                </div>
-                <div class="control">
-                    <input class="input" type="text" placeholder="sent RST" />
-                </div>
-                <div class="control is-expanded">
-                    <input class="input" type="text" placeholder="Memo" />
-                </div>
-                <div class="control">
-                    <button type="submit" class="button is-primary">
-                        Submit
-                    </button>
-                </div>
-            </div>
+            </form>
         </section>
     </body>
     <script src="./scripts/script.js"></script>

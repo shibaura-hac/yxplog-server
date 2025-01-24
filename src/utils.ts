@@ -4,7 +4,7 @@ import { format, formatDistance, formatRelative, subDays } from "npm:date-fns"
 
 const _keys_required = [
   "band",
-  "mod",
+  "mode",
   "call",
   "rrst",
   "srst",

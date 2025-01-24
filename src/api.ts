@@ -7,15 +7,12 @@ import { validateQSO, registerQSO, generateID, getLogs, searchLogs, editQSO } fr
 
 export const apiRouter = new Router();
 
-apiRouter.get("/", async (ctx: RouterContext) => {
-  ctx.response.headers.set("Content-Type", "text/plain");
-  ctx.response.body = `Welcome to YXPlog, see https://github.com/shibaura-hac/yxplog-server`;
-});
-
 apiRouter.post("/get", async (ctx: RouterContext) => {
   const requestBody = await ctx.request.body.json();
-  ctx.response.headers.set("Content-Typee", "application/json");
+  ctx.response.headers.set("Content-Type", "application/json");
+
   ctx.response.body = getLogs(requestBody);
+
 });
 
 apiRouter.post("/search", async (ctx: RouterContext) => {

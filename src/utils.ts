@@ -27,10 +27,10 @@ export function editQSO(mod: Record<string, unknown>): Promise<boolean> {
   if ("id" in mod && "qso" in mod) {
     const keys_missing = validateQSO(mod["qso"]);
     if (!(keys_missing.length === 0)) {
-      return {"status": false, "msg": `error: key ${keys_missing} are missing`}
+      return { "status": false, "msg": `error: key ${keys_missing} are missing` }
     };
 
-    db.update(({ logs }) =>{
+    db.update(({ logs }) => {
       const index = logs.findIndex((log) => log.id == mod["id"]);
 
       // id in the modified qso can be omitted. We'll handle this
@@ -40,9 +40,9 @@ export function editQSO(mod: Record<string, unknown>): Promise<boolean> {
 
       logs[index] = mod["qso"];
     })
-    return {"status": true, "qso": mod["qso"]}
+    return { "status": true, "qso": mod["qso"] }
   } else {
-    return {"status": false, "msg": "error: id or qso not provided", "received": data}
+    return { "status": false, "msg": "error: id or qso not provided", "received": data }
   }
 }
 
@@ -61,9 +61,9 @@ export function getLogs(options: Record<string, unknown>): Promise<Record<string
 
 export function searchLogs(options: Record<string, unknown>): Promise<Record<string, unknown>> {
   if ("call" in options) {
-    return {"status": true, "logs": logs.filter((log) => log.call.includes(options["call"]))};
+    return { "status": true, "logs": logs.filter((log) => log.call.includes(options["call"])) };
   }
-  return {"status": false, "msg": "error: no search query provided"};
+  return { "status": false, "msg": "error: no search query provided" };
 }
 
 export function getQSO(timestamp: String): Promise<Record<string, unknown>> {

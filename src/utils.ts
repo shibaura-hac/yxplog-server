@@ -53,8 +53,9 @@ export function generateID(): number {
 
 export function getLogs(options: Record<string, unknown>): Promise<Record<string, unknown>> {
   if ("id" in options) {
-    const index = logs.findIndex((log) => log.id == options["id"]);
-    return logs.slice(index - logs.length)
+    const index = logs.findIndex((log) => log.id == options["id"]) + 1;
+
+    return logs.slice(index, logs.length)
   }
   return logs.slice(-30);
 }

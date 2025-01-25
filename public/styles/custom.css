@@ -1,3 +1,7 @@
+:root {
+    --footer-height: 130px;
+}
+
 .is-fixed {
     position: fixed;
     width: 100%;
@@ -5,9 +9,10 @@
 
 footer {
     bottom: 0;
+    height: var(--footer-height);
 }
 
 .table-container {
     padding-top: 50px;
-    padding-bottom: 184px;
+    padding-bottom: var(--footer-height);
 }

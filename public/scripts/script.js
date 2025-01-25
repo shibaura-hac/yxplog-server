@@ -3,11 +3,17 @@ let callsignTable = document.getElementById("callsign-table-body");
 const server_url = window.location.origin;
 const qso_form = document.getElementById("qso_form");
 
-async function fetchLatestData() {
+async function _get(id = NaN) {
   const url = `${server_url}/get`;
+
+  let data = {};
+  if (id) {
+    data = { id: id };
+  }
+
   try {
     const response = await fetch(url, {
-      body: JSON.stringify({}),
+      body: JSON.stringify(data),
       method: "POST",
     });
     if (!response.ok) {
@@ -20,6 +26,10 @@ async function fetchLatestData() {
   } catch (error) {
     new Error(error);
   }
+}
+
+async function fetchLatestData() {
+  return _get();
 }
 
 async function registerQSO(QSO) {
@@ -71,6 +81,19 @@ qso_form.addEventListener("submit", (event) => {
     appendQSO(data["qso"]);
   });
 });
+
+function syncWithServer() {
+  console.log("syncing with server...");
+  let latest_id = callsignTable.lastElementChild.id;
+
+  _get(latest_id).then((data) => {
+    data.forEach((QSO) => {
+      appendQSO(QSO);
+    });
+  });
+}
+
+setInterval(syncWithServer, 5000);
 
 function createRowFrom(QSO) {
   const { band, mode, call, rrst, srst, pw, memo, id } = QSO;

@@ -8,12 +8,27 @@
         <link rel="stylesheet" href="./styles/custom.css" />
     </head>
     <body>
-        <div id="title" class="box p-3 m-2">
-            <h1 class="title">yxplog</h1>
-        </div>
-        <div id="table-container">
-            <table class="table" id="callsign_table">
-                <thead>
+        <nav
+            class="navbar is-fixed"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div class="navbar-brand">
+                <div class="navbar-item title is-4">yxplog</div>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-uppercase"> settings </a>
+                    <a class="navbar-item is-uppercase"> contests </a>
+                </div>
+
+                <div class="navbar-end"></div>
+            </div>
+        </nav>
+        <div class="table-container">
+            <table class="table is-fullwidth" id="callsign_table">
+                <thead class="is-fullwidth">
                     <tr>
                         <th><abbr title="Time">TIME</abbr></th>
                         <th><abbr title="Callsign">CALLSIGN</abbr></th>
@@ -29,88 +44,90 @@
                 <tbody id="callsign-table-body"></tbody>
             </table>
         </div>
-        <form class="m-3 box" id="qso_form">
-            <div class="field has-addons">
-                <div class="control">
-                    <input
-                        class="input"
-                        type="text"
-                        name="call"
-                        placeholder="callsign"
-                    />
-                </div>
-                <!-- <div class="control">
-                    <div class="select is-fullwidth">
-                        <select name="band">
-                            <option value="3.5">3.5</option>
-                            <option value="7">7</option>
-                            <option value="14">14</option>
-                            <option value="21">21</option>
-                            <option value="28">28</option>
-                            <option value="50">50</option>
-                            <option value="144">144</option>
-                            <option value="430">430</option>
-                            <option value="1200">1200</option>
-                            <option value="2400">2400</option>
-                        </select>
+        <footer class="footer is-fixed">
+            <form id="qso_form">
+                <div class="field has-addons">
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            name="call"
+                            placeholder="callsign"
+                        />
                     </div>
-                </div> -->
-                <div class="control">
-                    <div class="select is-fullwidth">
-                        <select name="mode">
-                            <option value="SSB">SSB</option>
-                            <option value="AM">AM</option>
-                            <option value="FM">FM</option>
-                            <option value="CW">CW</option>
-                            <option value="RTTY">RTTY</option>
-                        </select>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select name="band">
+                                <option value="3.5">3.5</option>
+                                <option value="7">7</option>
+                                <option value="14">14</option>
+                                <option value="21">21</option>
+                                <option value="28">28</option>
+                                <option value="50">50</option>
+                                <option value="144">144</option>
+                                <option value="430">430</option>
+                                <option value="1200">1200</option>
+                                <option value="2400">2400</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select name="mode">
+                                <option value="SSB">SSB</option>
+                                <option value="AM">AM</option>
+                                <option value="FM">FM</option>
+                                <option value="CW">CW</option>
+                                <option value="RTTY">RTTY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select name="pw">
+                                <option value="H">H</option>
+                                <option value="L">L</option>
+                                <option value="M">M</option>
+                                <option value="P">P</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control is-hidden-mobile">
+                        <input
+                            class="input"
+                            type="text"
+                            name="rrst"
+                            placeholder="received RST"
+                        />
+                    </div>
+                    <div class="control is-hidden-mobile">
+                        <input
+                            class="input"
+                            type="text"
+                            name="srst"
+                            placeholder="sent RST"
+                        />
+                    </div>
+                    <div class="control is-expanded is-hidden-mobile">
+                        <input
+                            name="memo"
+                            class="input"
+                            type="text"
+                            placeholder="Memo"
+                        />
+                    </div>
+                    <div class="control">
+                        <button
+                            type="submit"
+                            class="button is-primary"
+                            id="submit_button"
+                        >
+                            Submit
+                        </button>
                     </div>
                 </div>
-                <div class="control">
-                    <div class="select is-fullwidth">
-                        <select name="pw">
-                            <option value="H">H</option>
-                            <option value="L">L</option>
-                            <option value="M">M</option>
-                            <option value="P">P</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="control is-hidden-mobile">
-                    <input
-                        class="input"
-                        type="text"
-                        name="rrst"
-                        placeholder="received RST"
-                    />
-                </div>
-                <div class="control is-hidden-mobile">
-                    <input
-                        class="input"
-                        type="text"
-                        name="srst"
-                        placeholder="sent RST"
-                    />
-                </div>
-                <div class="control is-expanded is-hidden-mobile">
-                    <input
-                        name="memo"
-                        class="input"
-                        type="text"
-                        placeholder="Memo"
-                    />
-                </div>
-                <div class="control">
-                    <button
-                        type="submit"
-                        class="button is-primary"
-                        id="submit_button"
-                    >
-                        Submit
-                    </button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </footer>
     </body>
     <script src="./scripts/script.js"></script>
 </html>

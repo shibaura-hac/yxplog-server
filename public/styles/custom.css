@@ -1,34 +1,13 @@
-:root {
-    --title-height: 60px;
-}
-
-#table-container {
+.is-fixed {
+    position: fixed;
     width: 100%;
-    height: 100%;
-    padding-bottom: 100px;
 }
 
-#callsign_table {
-    margin-top: var(--title-height);
-}
-
-body {
-    max-height: 100vh;
-    max-width: 100vw;
-}
-
-#title {
-    position: fixed;
-    top: 0;
-    height: 60px;
-}
-
-#qso_form {
-    z-index: 1000; /* Ensure it's above the table */
-    position: fixed;
+footer {
     bottom: 0;
 }
 
-#callsign_table {
-    width: 100%;
+.table-container {
+    padding-top: 50px;
+    padding-bottom: 184px;
 }

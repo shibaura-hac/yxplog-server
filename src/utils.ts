@@ -56,7 +56,7 @@ export function getLogs(options: Record<string, unknown>): Promise<Record<string
     const index = logs.findIndex((log) => log.id == options["id"]);
     return logs.slice(index - logs.length)
   }
-  return logs.slice(-20);
+  return logs.slice(-30);
 }
 
 export function searchLogs(options: Record<string, unknown>): Promise<Record<string, unknown>> {

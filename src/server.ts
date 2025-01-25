@@ -38,4 +38,4 @@ app.use(async (ctx, next) => {
 app.use(apiRouter.routes());
 app.use(apiRouter.allowedMethods());
 
-app.listen({ port: 8090 });
+app.listen({ hostname: "0.0.0.0", port: 8090 });

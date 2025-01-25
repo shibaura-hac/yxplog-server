@@ -7,111 +7,110 @@
         <link rel="stylesheet" href="./styles/bulma.min.css" />
         <link rel="stylesheet" href="./styles/custom.css" />
     </head>
-    <body style="max-height: 100vw">
-        <section class="section">
+    <body>
+        <div id="title" class="box p-3 m-2">
             <h1 class="title">yxplog</h1>
-            <div id="table_container">
-                <table class="table" id="callsign_table">
-                    <thead>
-                        <tr>
-                            <th><abbr title="Time">TIME</abbr></th>
-                            <th><abbr title="Callsign">CALLSIGN</abbr></th>
-                            <th><abbr title="Bandwidth">BAND</abbr></th>
-                            <th><abbr title="Mode">MODE</abbr></th>
-                            <th>
-                                <abbr title="RST Received">RST RECEIVED</abbr>
-                            </th>
-                            <th><abbr title="RST Sent">RST SENT</abbr></th>
-                            <th><abbr title="Points">POINTS</abbr></th>
-                            <th>Memo</th>
-                        </tr>
-                    </thead>
-                    <tbody id="callsign-table-body"></tbody>
-                </table>
-            </div>
-            <form id="qso_form">
-                <div class="field has-addons">
-                    <div class="control">
-                        <input
-                            class="input"
-                            type="text"
-                            name="call"
-                            placeholder="callsign"
-                        />
+        </div>
+        <div id="table-container">
+            <table class="table" id="callsign_table">
+                <thead>
+                    <tr>
+                        <th><abbr title="Time">TIME</abbr></th>
+                        <th><abbr title="Callsign">CALLSIGN</abbr></th>
+                        <th><abbr title="Bandwidth">BAND</abbr></th>
+                        <th><abbr title="Mode">MODE</abbr></th>
+                        <th>
+                            <abbr title="RST Received">RST RECEIVED</abbr>
+                        </th>
+                        <th><abbr title="RST Sent">RST SENT</abbr></th>
+                        <th><abbr title="Memo">MEMO</abbr></th>
+                    </tr>
+                </thead>
+                <tbody id="callsign-table-body"></tbody>
+            </table>
+        </div>
+        <form class="m-3 box" id="qso_form">
+            <div class="field has-addons">
+                <div class="control">
+                    <input
+                        class="input"
+                        type="text"
+                        name="call"
+                        placeholder="callsign"
+                    />
+                </div>
+                <!-- <div class="control">
+                    <div class="select is-fullwidth">
+                        <select name="band">
+                            <option value="3.5">3.5</option>
+                            <option value="7">7</option>
+                            <option value="14">14</option>
+                            <option value="21">21</option>
+                            <option value="28">28</option>
+                            <option value="50">50</option>
+                            <option value="144">144</option>
+                            <option value="430">430</option>
+                            <option value="1200">1200</option>
+                            <option value="2400">2400</option>
+                        </select>
                     </div>
-                    <div class="control">
-                        <div class="select is-fullwidth">
-                            <select name="band">
-                                <option value="35">3.5</option>
-                                <option value="7">7</option>
-                                <option value="14">14</option>
-                                <option value="21">21</option>
-                                <option value="28">28</option>
-                                <option value="50">50</option>
-                                <option value="144">144</option>
-                                <option value="430">430</option>
-                                <option value="1200">1200</option>
-                                <option value="2400">2400</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="control">
-                        <div class="select is-fullwidth">
-                            <select name="mode">
-                                <option value="SSB">SSB</option>
-                                <option value="AM">AM</option>
-                                <option value="FM">FM</option>
-                                <option value="CW">CW</option>
-                                <option value="RTTY">RTTY</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="control">
-                        <div class="select is-fullwidth">
-                            <select name="pw">
-                                <option value="H">H</option>
-                                <option value="L">L</option>
-                                <option value="M">M</option>
-                                <option value="P">P</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="control">
-                        <input
-                            class="input"
-                            type="text"
-                            name="rrst"
-                            placeholder="received RST"
-                        />
-                    </div>
-                    <div class="control">
-                        <input
-                            class="input"
-                            type="text"
-                            name="srst"
-                            placeholder="sent RST"
-                        />
-                    </div>
-                    <div class="control is-expanded">
-                        <input
-                            name="memo"
-                            class="input"
-                            type="text"
-                            placeholder="Memo"
-                        />
-                    </div>
-                    <div class="control">
-                        <button
-                            type="submit"
-                            class="button is-primary"
-                            id="submit_button"
-                        >
-                            Submit
-                        </button>
+                </div> -->
+                <div class="control">
+                    <div class="select is-fullwidth">
+                        <select name="mode">
+                            <option value="SSB">SSB</option>
+                            <option value="AM">AM</option>
+                            <option value="FM">FM</option>
+                            <option value="CW">CW</option>
+                            <option value="RTTY">RTTY</option>
+                        </select>
                     </div>
                 </div>
-            </form>
-        </section>
+                <div class="control">
+                    <div class="select is-fullwidth">
+                        <select name="pw">
+                            <option value="H">H</option>
+                            <option value="L">L</option>
+                            <option value="M">M</option>
+                            <option value="P">P</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control is-hidden-mobile">
+                    <input
+                        class="input"
+                        type="text"
+                        name="rrst"
+                        placeholder="received RST"
+                    />
+                </div>
+                <div class="control is-hidden-mobile">
+                    <input
+                        class="input"
+                        type="text"
+                        name="srst"
+                        placeholder="sent RST"
+                    />
+                </div>
+                <div class="control is-expanded is-hidden-mobile">
+                    <input
+                        name="memo"
+                        class="input"
+                        type="text"
+                        placeholder="Memo"
+                    />
+                </div>
+                <div class="control">
+                    <button
+                        type="submit"
+                        class="button is-primary"
+                        id="submit_button"
+                    >
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </form>
     </body>
     <script src="./scripts/script.js"></script>
 </html>

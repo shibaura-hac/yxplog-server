@@ -77,15 +77,23 @@ function createRowFrom(QSO) {
 
   const row = document.createElement("tr");
 
+  let date = new Date(id);
+
+  let time = date.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+
   row.id = id;
 
   row.innerHTML = `
+    <td>${time}</td>
     <td>${call}</td>
     <td>${band}</td>
     <td>${pw}</td>
     <td>${rrst}</td>
     <td>${srst}</td>
-    <td>1</td>
     <td>${memo}</td>
   `;
 

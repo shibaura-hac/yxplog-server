@@ -10,9 +10,7 @@ export const apiRouter = new Router();
 apiRouter.post("/get", async (ctx: RouterContext) => {
   const requestBody = await ctx.request.body.json();
   ctx.response.headers.set("Content-Type", "application/json");
-
   ctx.response.body = getLogs(requestBody);
-
 });
 
 apiRouter.post("/search", async (ctx: RouterContext) => {
@@ -42,6 +40,7 @@ apiRouter.post("/register", async (ctx: RouterContext) => {
       "qso": ${JSON.stringify(_qso)}
     }`;
   } else {
+    console.log(`keys not present: ${_keys_not_present.join(", ")}`)
     ctx.response.body = `{
       "status": false,
       "message": "keys not present: ${_keys_not_present.join(", ")}"

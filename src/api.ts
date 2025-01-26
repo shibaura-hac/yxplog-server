@@ -35,6 +35,8 @@ apiRouter.post("/register", async (ctx: RouterContext) => {
       _qso.id = today;
     }
 
+    _qso.call = _qso.call.toUpperCase();
+
     const result = await dbutils.register(_qso);
 
     ctx.response.body = `{

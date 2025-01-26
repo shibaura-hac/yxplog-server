@@ -2,34 +2,36 @@ import {
   Router,
   RouterContext,
 } from "https://deno.land/x/oak@v17.1.4/mod.ts";
-
-import { validateQSO, registerQSO, generateID, getLogs, searchLogs, editQSO } from "./utils.ts";
+import * as qso from "./utils.ts";
+import * as dbutils from "./dbutils.ts"
 
 export const apiRouter = new Router();
 
-apiRouter.post("/get", async (ctx: RouterContext) => {
-  const requestBody = await ctx.request.body.json();
+apiRouter.use((ctx, next) => {
   ctx.response.headers.set("Content-Type", "application/json");
-  ctx.response.body = getLogs(requestBody);
+  return next();
+});
+
+apiRouter.post("/get", async (ctx: RouterContext) => {
+  const payload = await ctx.request.body.json();
+  ctx.response.body = dbutils.get(payload);
 });
 
 apiRouter.post("/search", async (ctx: RouterContext) => {
-  const requestBody = await ctx.request.body.json();
-  ctx.response.headers.set("Content-Type", "application/json");
-  ctx.response.body = searchLogs(requestBody);
+  const payload = await ctx.request.body.json();
+  ctx.response.body = dbutils.search(payload);
 });
 
 apiRouter.post("/register", async (ctx: RouterContext) => {
-  ctx.response.headers.set("Content-Type", "application/json");
 
   let _qso = await ctx.request.body.json();
-  const _keys_not_present = validateQSO(_qso);
+  const keys_not_present = qso.validate(_qso);
 
-  if (_keys_not_present.length === 0) {
+  if (keys_not_present.length === 0) {
     // TODO: catch database error
 
     if (!("date" in _qso)) {
-      const today = generateID();
+      const today = qso.generateID();
       _qso.id = today;
     }
 
@@ -40,15 +42,14 @@ apiRouter.post("/register", async (ctx: RouterContext) => {
       "qso": ${JSON.stringify(_qso)}
     }`;
   } else {
-    console.log(`keys not present: ${_keys_not_present.join(", ")}`)
+    console.log(`keys not present: ${keys_not_present.join(", ")}`)
     ctx.response.body = `{
       "status": false,
-      "message": "keys not present: ${_keys_not_present.join(", ")}"
+      "message": "keys not present: ${keys_not_present.join(", ")}"
     }`;
   }
 });
 
 apiRouter.post("/edit", async (ctx: RouterContext) => {
-  ctx.response.headers.set("Content-Type", "application/json");
-  ctx.response.body = editQSO(await ctx.request.body.json());
+  ctx.response.body = dbutils.edit(await ctx.request.body.json());
 });

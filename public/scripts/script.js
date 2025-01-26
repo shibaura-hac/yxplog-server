@@ -95,6 +95,11 @@ function syncWithServer() {
 
 setInterval(syncWithServer, 5000);
 
+function onRowClick(event) {
+  qso_form.querySelector("input:nth-child(1)").value =
+    event.target.childNodes.length;
+}
+
 function createRowFrom(QSO) {
   const { band, mode, call, rrst, srst, pw, memo, id } = QSO;
 
@@ -109,6 +114,8 @@ function createRowFrom(QSO) {
   });
 
   row.id = id;
+
+  row.addEventListener("click", onRowClick);
 
   row.innerHTML = `
     <td>${time}</td>

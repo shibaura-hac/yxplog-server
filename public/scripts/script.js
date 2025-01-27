@@ -40,7 +40,6 @@ async function registerQSO(QSO) {
 	"call": "JA1YXP",
 	"rrst": "59",
 	"srst": "59",
-	"pw": "M",
 	"memo": "memo"
   }
   */
@@ -101,27 +100,28 @@ function onRowClick(event) {
 }
 
 function createRowFrom(QSO) {
-  const { band, mode, call, rrst, srst, pw, memo, id } = QSO;
+  const { id, call, band, mode, rrst, srst, memo } = QSO;
+  //id considerd as a time grant by server
 
   const row = document.createElement("tr");
 
   let date = new Date(id);
 
-  let time = date.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  });
+  //let time = date.toLocaleTimeString([], {
+  //  hour: "2-digit",
+  //  minute: "2-digit",
+  //  hour12: false,
+  //});
 
   row.id = id;
 
   row.addEventListener("click", onRowClick);
 
   row.innerHTML = `
-    <td>${time}</td>
+    <td>${id}</td>
     <td>${call}</td>
     <td>${band}</td>
-    <td>${pw}</td>
+    <td>${mode}</td>
     <td>${rrst}</td>
     <td>${srst}</td>
     <td>${memo}</td>

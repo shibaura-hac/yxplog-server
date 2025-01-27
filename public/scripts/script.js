@@ -1,9 +1,40 @@
-let callsignTable = document.getElementById("callsign-table-body");
+const callsignTable = document.getElementById("callsign-table-body");
 
 const server_url = window.location.origin;
 const qso_form = document.getElementById("qso_form");
 
-async function _get(id = NaN) {
+fetchLatestData().then((data) => {
+  appendEachQSO(data);
+});
+
+setInterval(syncWithServer, 5000);
+
+qso_form.addEventListener("submit", (event) => {
+  // weird little hack ChatGPT told me
+
+  event.preventDefault(); // Prevent form submission
+  const inputs = qso_form.querySelectorAll(
+    "input[name], select[name], textarea[name]",
+  );
+  const values = {};
+
+  inputs.forEach((input) => {
+    values[input.name] = input.value;
+  });
+
+  const result = registerQSO(values);
+
+  result.then((data) => {
+    appendQSO(data["qso"]);
+  });
+});
+
+function appendQSO(QSO) {
+  const row = createRowFrom(QSO);
+  callsignTable.appendChild(row);
+}
+
+async function fetchLatestData(id = NaN) {
   const url = `${server_url}/get`;
 
   let data = {};
@@ -28,8 +59,10 @@ async function _get(id = NaN) {
   }
 }
 
-async function fetchLatestData() {
-  return _get();
+function appendEachQSO(data) {
+  data.forEach((QSO) => {
+    appendQSO(QSO);
+  });
 }
 
 async function registerQSO(QSO) {
@@ -61,38 +94,14 @@ async function registerQSO(QSO) {
   }
 }
 
-qso_form.addEventListener("submit", (event) => {
-  // weird little hack ChatGPT told me
-
-  event.preventDefault(); // Prevent form submission
-  const inputs = qso_form.querySelectorAll(
-    "input[name], select[name], textarea[name]",
-  );
-  const values = {};
-
-  inputs.forEach((input) => {
-    values[input.name] = input.value;
-  });
-
-  let result = registerQSO(values);
-
-  result.then((data) => {
-    appendQSO(data["qso"]);
-  });
-});
-
 function syncWithServer() {
   console.log("syncing with server...");
-  let latest_id = callsignTable.lastElementChild.id;
+  const latest_id = callsignTable.lastElementChild.id;
 
-  _get(latest_id).then((data) => {
-    data.forEach((QSO) => {
-      appendQSO(QSO);
-    });
+  fetchLatestData(latest_id).then((data) => {
+    appendEachQSO(data);
   });
 }
-
-setInterval(syncWithServer, 5000);
 
 function onRowClick(event) {
   qso_form.querySelector("input:nth-child(1)").value =
@@ -105,9 +114,9 @@ function createRowFrom(QSO) {
 
   const row = document.createElement("tr");
 
-  let date = new Date(id);
+  //const date = new Date(id);
 
-  //let time = date.toLocaleTimeString([], {
+  //const time = date.toLocaleTimeString([], {
   //  hour: "2-digit",
   //  minute: "2-digit",
   //  hour12: false,
@@ -130,15 +139,3 @@ function createRowFrom(QSO) {
   return row;
 }
 
-function appendQSO(QSO) {
-  const row = createRowFrom(QSO);
-  callsignTable.appendChild(row);
-}
-
-const fetchedData = fetchLatestData();
-
-fetchedData.then((data) => {
-  data.forEach((QSO) => {
-    appendQSO(QSO);
-  });
-});

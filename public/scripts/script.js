@@ -101,7 +101,7 @@ function onRowClick(event) {
 
 function createRowFrom(QSO) {
   const { id, call, band, mode, rrst, srst, memo } = QSO;
-  //idにはサーバ側で付与された時刻が入っていることを想定
+  //id considerd as a time grant by server
 
   const row = document.createElement("tr");
 

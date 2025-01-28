@@ -4,7 +4,6 @@ const _keys_required = [
   "call",
   "rrst",
   "srst",
-  "pw",
   "memo"
 ]
 

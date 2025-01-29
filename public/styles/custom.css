@@ -7,6 +7,10 @@
     width: 100%;
 }
 
+#connection-error {
+    display: none;
+}
+
 footer {
     bottom: 0;
     height: var(--footer-height);

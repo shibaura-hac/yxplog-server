@@ -10,24 +10,37 @@ fetchLatestData().then((data) => {
 setInterval(syncWithServer, 5000);
 
 qso_form.addEventListener("submit", (event) => {
-  // weird little hack ChatGPT told me
-
   event.preventDefault(); // Prevent form submission
-  const inputs = qso_form.querySelectorAll(
-    "input[name], select[name], textarea[name]",
-  );
-  const values = {};
 
-  inputs.forEach((input) => {
-    values[input.name] = input.value;
-  });
-
+  // register the data
+  
+  const values = getDataFromForm();
   const result = registerQSO(values);
+
 
   result.then((data) => {
     appendQSO(data["qso"]);
   });
 });
+
+
+// connection error indicator
+function showConnectionError(status) {
+  const display = ((status) ? "inline" : "none");
+  document.querySelector("#connection-error").style.display = display;
+}
+
+function getDataFromForm() {
+  const values = {};
+  const inputs = qso_form.querySelectorAll(
+    "input[name], select[name], textarea[name]",
+  );
+  inputs.forEach((input) => {
+    values[input.name] = input.value;
+  });
+
+  return values
+}
 
 function appendQSO(QSO) {
   const row = createRowFrom(QSO);
@@ -84,7 +97,7 @@ async function registerQSO(QSO) {
   }
   */
   const url = `${server_url}/register`;
-  _post_data(QSO)
+  return _post_data(url, QSO)
 }
 
 function syncWithServer() {
@@ -92,9 +105,14 @@ function syncWithServer() {
   // TODO: come up with a better way to get the latest synced id
   const latest_id = callsignTable.lastElementChild.id;
 
-  fetchLatestData(latest_id).then((data) => {
-    appendEachQSO(data);
-  });
+  fetchLatestData(latest_id)
+    .then((data) => {
+      appendEachQSO(data)
+      showConnectionError(false);
+    })
+    .catch((error) => {
+      showConnectionError(true);
+    });
 }
 
 function onRowClick(event) {

@@ -122,26 +122,31 @@ function onRowClick(event) {
     event.target.childNodes.length;
 }
 
+function idToLocalTime(id) {
+  const date = new Date(id);
+
+  const time = date.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+
+  return time;
+}
+
 function createRowFrom(QSO) {
   const { id, call, band, mode, rrst, srst, memo } = QSO;
   //id considerd as a time grant by server
 
   const row = document.createElement("tr");
-
-  //const date = new Date(id);
-
-  //const time = date.toLocaleTimeString([], {
-  //  hour: "2-digit",
-  //  minute: "2-digit",
-  //  hour12: false,
-  //});
+  const time = idToLocalTime(id);
 
   row.id = id;
 
   row.addEventListener("click", onRowClick);
 
   row.innerHTML = `
-    <td>${id}</td>
+    <td>${time}</td>
     <td>${call}</td>
     <td>${band}</td>
     <td>${mode}</td>

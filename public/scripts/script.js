@@ -3,15 +3,11 @@ const callsignTable = document.getElementById("callsign-table-body");
 const server_url = window.location.origin;
 const qso_form = document.getElementById("qso_form");
 
-let latest_id = NaN;
-
 // fetch server data on load
 syncWithServer();
 
-
 // sync with the server every 5 seconds
 setInterval(syncWithServer, 5000);
-
 
 qso_form.addEventListener("submit", (event) => {
   event.preventDefault(); // Prevent form submission
@@ -26,10 +22,9 @@ qso_form.addEventListener("submit", (event) => {
   });
 });
 
-
 // connection error indicator
 function showConnectionError(status) {
-  const display = ((status) ? "inline" : "none");
+  const display = status ? "inline" : "none";
   document.querySelector("#connection-error").style.display = display;
 }
 
@@ -42,7 +37,7 @@ function getDataFromForm() {
     values[input.name] = input.value;
   });
 
-  return values
+  return values;
 }
 
 function appendQSO(QSO) {
@@ -64,11 +59,10 @@ function _post_data(url, data) {
 
       const json = response.json();
       resolve(json);
-
     } catch (error) {
       reject(error);
     }
-  })
+  });
 }
 
 async function fetchServerData(since = NaN) {
@@ -102,20 +96,19 @@ async function registerQSO(QSO) {
   }
   */
   const url = `${server_url}/register`;
-  return _post_data(url, QSO)
+  return _post_data(url, QSO);
 }
 
 function syncWithServer() {
   console.log("syncing with server...");
   // TODO: come up with a better way to get the latest synced id
 
+  let latest_id = callsignTable.lastChild ? callsignTable.lastChild.id : NaN;
+
   fetchServerData(latest_id)
     .then((data) => {
-      appendEachQSO(data)
+      appendEachQSO(data);
 
-      console.log(Array.isArray(data));
-      latest_id = data[data.length - 1]["id"];
-      
       showConnectionError(false);
     })
     .catch((error) => {
@@ -159,4 +152,3 @@ function createRowFrom(QSO) {
 
   return row;
 }
-

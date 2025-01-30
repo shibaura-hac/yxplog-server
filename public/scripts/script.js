@@ -9,15 +9,16 @@ syncWithServer();
 // sync with the server every 5 seconds
 setInterval(syncWithServer, 5000);
 
-qso_form.addEventListener("submit", (event) => {
+qso_form.addEventListener("submit", async (event) => {
   event.preventDefault(); // Prevent form submission
 
   // register the data
   const values = getDataFromForm();
-  const result = registerQSO(values);
+  const result = await registerQSO(values);
 
   // sync with server on registration
-  result.then((data) => {
+  // need to consider the flow: sync -> register -> reflect
+  result.then(() => {
     syncWithServer();
   });
 });
@@ -45,24 +46,43 @@ function appendQSO(QSO) {
   callsignTable.appendChild(row);
 }
 
-function _post_data(url, data) {
-  return new Promise(async (resolve, reject) => {
+//function _post_data(url, data) {
+//  return new Promise(async (resolve, reject) => {
+//    try {
+//      const response = await fetch(url, {
+//        body: JSON.stringify(data),
+//        method: "POST",
+//      });
+//
+//      if (!response.ok) {
+//        reject(response.status);
+//      }
+//
+//      const json = response.json();
+//      resolve(json);
+//    } catch (error) {
+//      reject(error);
+//    }
+//  });
+//}
+
+async function _post_data(url, data) {
     try {
-      const response = await fetch(url, {
-        body: JSON.stringify(data),
-        method: "POST",
-      });
-
-      if (!response.ok) {
-        reject(response.status);
-      }
-
-      const json = response.json();
-      resolve(json);
+        const response = await fetch(url, {
+          body: JSON.stringify(data),
+          method: "POST",
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        
+        const json = await response.json();
+        return json;
     } catch (error) {
-      reject(error);
+        console.error('Fetch error:', error.message);
+        // TODO: add error process
     }
-  });
 }
 
 async function fetchServerData(since = NaN) {
@@ -75,7 +95,7 @@ async function fetchServerData(since = NaN) {
     data = { id: since };
   }
 
-  return _post_data(url, data);
+  return await _post_data(url, data);
 }
 
 function appendEachQSO(data) {
@@ -96,14 +116,14 @@ async function registerQSO(QSO) {
   }
   */
   const url = `${server_url}/register`;
-  return _post_data(url, QSO);
+  return await _post_data(url, QSO);
 }
 
 function syncWithServer() {
   console.log("syncing with server...");
   // TODO: come up with a better way to get the latest synced id
 
-  let latest_id = callsignTable.lastChild ? callsignTable.lastChild.id : NaN;
+  const latest_id = callsignTable.lastChild ? callsignTable.lastChild.id : NaN;
 
   fetchServerData(latest_id)
     .then((data) => {

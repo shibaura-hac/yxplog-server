@@ -18,9 +18,7 @@ qso_form.addEventListener("submit", async (event) => {
 
   // sync with server on registration
   // need to consider the flow: sync -> register -> reflect
-  result.then(() => {
-    syncWithServer();
-  });
+  syncWithServer();
 });
 
 // connection error indicator

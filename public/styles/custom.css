@@ -7,6 +7,11 @@
     width: 100%;
 }
 
+#connection-error {
+    display: none;
+    position: fixed;
+}
+
 footer {
     bottom: 0;
     height: var(--footer-height);
@@ -15,4 +20,13 @@ footer {
 .table-container {
     padding-top: 50px;
     padding-bottom: var(--footer-height);
+    overflow: visible;
 }
+
+#callsign_table thead th {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 50px;
+    background: inherit;
+    z-index: 1;
+ }

@@ -23,11 +23,13 @@ qso_form.addEventListener("submit", async (event) => {
 });
 
 function resetForm() {
-  let victims = [1, 4, 5, 6];
+  const victims = [1, 4, 5, 6];
 
   for (const victim of victims) {
     document.querySelector(`div.control:nth-child(${victim}) > input`).value = "";
   }
+
+  qso_form.querySelector("input[name=call]").focus();
 }
 
 // connection error indicator

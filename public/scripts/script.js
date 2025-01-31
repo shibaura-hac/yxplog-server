@@ -19,7 +19,16 @@ qso_form.addEventListener("submit", async (event) => {
   // sync with server on registration
   // need to consider the flow: sync -> register -> reflect
   syncWithServer();
+  resetForm();
 });
+
+function resetForm() {
+  let victims = [1, 4, 5, 6];
+
+  for (const victim of victims) {
+    document.querySelector(`div.control:nth-child(${victim}) > input`).value = "";
+  }
+}
 
 // connection error indicator
 function showConnectionError(status) {

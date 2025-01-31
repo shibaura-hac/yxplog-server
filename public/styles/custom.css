@@ -27,6 +27,6 @@ footer {
     position: sticky;
     position: -webkit-sticky;
     top: 50px;
-    background: inherit;
+    background-color: var(--bulma-table-background-color);
     z-index: 1;
  }

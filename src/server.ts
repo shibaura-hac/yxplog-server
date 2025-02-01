@@ -27,6 +27,8 @@ app.use(async (ctx, next) => {
     });
   } else if (ctx.request.url.pathname == "/") {
     ctx.response.redirect("/public/frontend.html")
+  } else if (ctx.request.url.pathname == "/favicon.ico") {
+    ctx.response.redirect("/public/shac-logo-square.ico")
   } else {
     await next();  // Pass control to the next middleware
     return;

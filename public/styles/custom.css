@@ -17,9 +17,12 @@ footer {
     height: var(--footer-height);
 }
 
-.table-container {
+#main {
     padding-top: 50px;
     padding-bottom: var(--footer-height);
+}
+
+.table-container {
     overflow: visible;
 }
 
@@ -29,4 +32,4 @@ footer {
     top: 50px;
     background-color: var(--bulma-table-background-color);
     z-index: 1;
- }
+}

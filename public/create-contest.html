@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>yxplog | normal mode</title>
+        <link rel="stylesheet" href="./styles/bulma.min.css" />
+        <link rel="stylesheet" href="./styles/custom.css" />
+    </head>
+    <body>
+        <nav
+            class="navbar is-fixed"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <progress
+                id="connection-error"
+                class="progress is-small is-danger"
+                max="100"
+            >
+                15%
+            </progress>
+            <div class="navbar-brand">
+                <div class="navbar-item title is-4">yxplog</div>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-uppercase"> settings </a>
+                    <a class="navbar-item is-uppercase"> contests </a>
+                </div>
+
+                <div class="navbar-end"></div>
+            </div>
+        </nav>
+        <div id="main">
+            <div class="m-6">
+                <div class="field is-horizontal">
+                    <div class="field-label is-large">
+                        <label class="label">コンテスト</label>
+                    </div>
+                    <div class="field-body"></div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">コンテスト名</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input
+                                    class="input"
+                                    type="text"
+                                    placeholder="全市全郡コンテスト"
+                                />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">参加種目コード</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field is-narrow">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select>
+                                        <option>
+                                            シングルオペオールバンド(XAH)
+                                        </option>
+                                        <option>
+                                            マルチオペオールバンド(XMAH)
+                                        </option>
+                                        <option>マルチオペジュニア(XMJ)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-large">
+                        <label class="label">参加団体/個人</label>
+                    </div>
+                    <div class="field-body"></div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">局免許者/団体名</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input
+                                    class="input"
+                                    type="text"
+                                    placeholder="アマチュア太郎"
+                                />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">コールサイン</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input
+                                    class="input"
+                                    type="text"
+                                    placeholder="JA1YXP"
+                                />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">最大空中線電力(W)</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input
+                                    class="input"
+                                    type="number"
+                                    placeholder="100"
+                                />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">連絡先住所</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <textarea
+                                    class="textarea"
+                                    placeholder="東京都千代田区千代田1-1"
+                                ></textarea>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">電話番号</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input
+                                    class="input"
+                                    type="tel"
+                                    placeholder="01201234567"
+                                />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">E-Mailアドレス</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input
+                                    class="input"
+                                    type="email"
+                                    placeholder="user@example.com"
+                                />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-large">
+                        <label class="label">FD必須項目</label>
+                    </div>
+                    <div class="field-body"></div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">運用地</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input class="input" type="text" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">局種係数</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input
+                                    class="input"
+                                    type="number"
+                                    placeholder="1"
+                                    value="1"
+                                />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">使用した電源</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input class="input" type="text" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <!-- Left empty for spacing -->
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary">保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./scripts/script.js"></script>
+</html>

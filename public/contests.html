@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>yxplog | normal mode</title>
+        <link rel="stylesheet" href="./styles/bulma.min.css" />
+        <link rel="stylesheet" href="./styles/custom.css" />
+    </head>
+    <body>
+        <nav
+            class="navbar is-fixed"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <progress
+                id="connection-error"
+                class="progress is-small is-danger"
+                max="100"
+            >
+                15%
+            </progress>
+            <div class="navbar-brand">
+                <div class="navbar-item title is-4">yxplog</div>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-uppercase"> settings </a>
+                    <a class="navbar-item is-uppercase" href="contests.html">
+                        contests
+                    </a>
+                </div>
+
+                <div class="navbar-end"></div>
+            </div>
+        </nav>
+        <div id="main">
+            <div class="m-3">
+                <div id="contests-list"></div>
+                <iframe
+                    width="780"
+                    height="480"
+                    src="https://www.cqcqcq.org/contestj/202501.htm"
+                >
+                </iframe>
+                <div id="interactions">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a
+                                class="button is-primary"
+                                href="create-contest.html"
+                            >
+                                新規コンテスト
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./scripts/script.js"></script>
+</html>

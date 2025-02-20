@@ -2,6 +2,7 @@
 const callsignTable = document.getElementById("callsign-table-body");
 const server_url = window.location.origin;
 const qso_form = document.getElementById("qso_form");
+const scroll_to_latest_button = document.getElementById('scroll-to-latest-button');
 
 // fetch server data on load
 syncWithServer();
@@ -20,6 +21,10 @@ qso_form.addEventListener("submit", async (event) => {
   // need to consider the flow: sync -> register -> reflect
   syncWithServer();
   resetForm();
+});
+
+scroll_to_latest_button.addEventListener("click", () => {
+  scrollToBottom();
 });
 
 function resetForm() {
@@ -54,16 +59,21 @@ function appendQSO(QSO, scrolling) {
   const row = createRowFrom(QSO);
   callsignTable.appendChild(row);
   if (scrolling) {
-    document.querySelector(".table-container").scrollIntoView(
-      {
-        behavior: "smooth",
-        block: "end", //it sticks out a little...
-        inline: "nearest"
-      }
-    );
+    scroll_to_latest_button.style.display =  "none";
+    scrollToBottom();
   } else {
-    //show scroll to latest button
+    scroll_to_latest_button.style.display =  "inline-block";
   }
+}
+
+function scrollToBottom() {
+  document.querySelector(".table-container").scrollIntoView({
+      behavior: "smooth",
+      block: "end", //it sticks out a little...
+      inline: "nearest"
+    }
+  );
+  scroll_to_latest_button.style.display = "none";
 }
 
 //function _post_data(url, data) {

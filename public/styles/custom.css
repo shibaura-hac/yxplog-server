@@ -13,8 +13,11 @@
 }
 
 footer {
+    position: relative;
     bottom: 0;
     height: var(--footer-height);
+    text-align: center;
+    overflow: visible;
 }
 
 .table-container {
@@ -30,3 +33,11 @@ footer {
     background: inherit;
     z-index: 1;
  }
+
+#scroll-to-latest-button{
+    display: none;
+    position: absolute;
+    top: -3rem;
+    height: 2rem;
+    width: fit-content;
+}

@@ -50,9 +50,20 @@ function getDataFromForm() {
   return values;
 }
 
-function appendQSO(QSO) {
+function appendQSO(QSO, scrolling) {
   const row = createRowFrom(QSO);
   callsignTable.appendChild(row);
+  if (scrolling) {
+    document.querySelector(".table-container").scrollIntoView(
+      {
+        behavior: "smooth",
+        block: "end", //it sticks out a little...
+        inline: "nearest"
+      }
+    );
+  } else {
+    //show scroll to latest button
+  }
 }
 
 //function _post_data(url, data) {
@@ -107,9 +118,9 @@ async function fetchServerData(since = NaN) {
   return await _post_data(url, data);
 }
 
-function appendEachQSO(data) {
+function appendEachQSO(data, scrolling) {
   data.forEach((QSO) => {
-    appendQSO(QSO);
+    appendQSO(QSO, scrolling);
   });
 }
 
@@ -131,12 +142,14 @@ async function registerQSO(QSO) {
 function syncWithServer() {
   console.log("syncing with server...");
   // TODO: come up with a better way to get the latest synced id
+  
+  const scrolling = isLastQsoShowed();
 
   const latest_id = callsignTable.lastChild ? callsignTable.lastChild.id : NaN;
 
   fetchServerData(latest_id)
     .then((data) => {
-      appendEachQSO(data);
+      appendEachQSO(data, scrolling);
 
       showConnectionError(false);
     })
@@ -144,6 +157,15 @@ function syncWithServer() {
       showConnectionError(true);
       console.log(error);
     });
+}
+
+function isLastQsoShowed() {
+  const latestQso = callsignTable.lastChild || null;
+  const latestQsoOffsetY = latestQso ? latestQso.getBoundingClientRect().top : 0;
+  const clientHeight = document.querySelector('html').clientHeight;
+  const footerHeight = Number(getComputedStyle(document.documentElement).getPropertyValue('--footer-height').replace('px', ''));
+  const tableFrameBottomEdgeOffsetY = clientHeight - footerHeight;
+  return latestQso ? (tableFrameBottomEdgeOffsetY - latestQsoOffsetY > 0 ? true : false) : true;
 }
 
 function onRowClick(event) {

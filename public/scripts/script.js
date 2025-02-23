@@ -55,15 +55,9 @@ function getDataFromForm() {
   return values;
 }
 
-function appendQSO(QSO, scrolling) {
+function appendQSO(QSO) {
   const row = createRowFrom(QSO);
   callsignTable.appendChild(row);
-  if (scrolling) {
-    scroll_to_latest_button.style.display =  "none";
-    scrollToBottom();
-  } else {
-    scroll_to_latest_button.style.display =  "inline-block";
-  }
 }
 
 function scrollToBottom() {
@@ -128,9 +122,9 @@ async function fetchServerData(since = NaN) {
   return await _post_data(url, data);
 }
 
-function appendEachQSO(data, scrolling) {
+function appendEachQSO(data) {
   data.forEach((QSO) => {
-    appendQSO(QSO, scrolling);
+    appendQSO(QSO);
   });
 }
 
@@ -153,13 +147,19 @@ function syncWithServer() {
   console.log("syncing with server...");
   // TODO: come up with a better way to get the latest synced id
   
-  const scrolling = isLastQsoShowed();
+  const scrolling = isLastQsoShown();
 
   const latest_id = callsignTable.lastChild ? callsignTable.lastChild.id : NaN;
 
   fetchServerData(latest_id)
     .then((data) => {
-      appendEachQSO(data, scrolling);
+      appendEachQSO(data);
+      if (scrolling) {
+        scroll_to_latest_button.style.display =  "none";
+        scrollToBottom();
+      } else {
+        scroll_to_latest_button.style.display =  "inline-block";
+      }
 
       showConnectionError(false);
     })
@@ -169,7 +169,7 @@ function syncWithServer() {
     });
 }
 
-function isLastQsoShowed() {
+function isLastQsoShown() {
   const latestQso = callsignTable.lastChild || null;
   const latestQsoOffsetY = latestQso ? latestQso.getBoundingClientRect().top : 0;
   const clientHeight = document.querySelector('html').clientHeight;

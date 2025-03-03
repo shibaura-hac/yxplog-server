@@ -2,6 +2,7 @@
 const callsignTable = document.getElementById("callsign-table-body");
 const server_url = window.location.origin;
 const qso_form = document.getElementById("qso_form");
+const scroll_to_latest_button = document.getElementById('scroll-to-latest-button');
 
 // fetch server data on load
 syncWithServer();
@@ -20,6 +21,10 @@ qso_form.addEventListener("submit", async (event) => {
   // need to consider the flow: sync -> register -> reflect
   syncWithServer();
   resetForm();
+});
+
+scroll_to_latest_button.addEventListener("click", () => {
+  scrollToBottom();
 });
 
 function resetForm() {
@@ -53,6 +58,16 @@ function getDataFromForm() {
 function appendQSO(QSO) {
   const row = createRowFrom(QSO);
   callsignTable.appendChild(row);
+}
+
+function scrollToBottom() {
+  document.querySelector(".table-container").scrollIntoView({
+      behavior: "smooth",
+      block: "end", //it sticks out a little...
+      inline: "nearest"
+    }
+  );
+  scroll_to_latest_button.style.display = "none";
 }
 
 //function _post_data(url, data) {
@@ -131,12 +146,20 @@ async function registerQSO(QSO) {
 function syncWithServer() {
   console.log("syncing with server...");
   // TODO: come up with a better way to get the latest synced id
+  
+  const scrolling = isLastQsoShown();
 
   const latest_id = callsignTable.lastChild ? callsignTable.lastChild.id : NaN;
 
   fetchServerData(latest_id)
     .then((data) => {
       appendEachQSO(data);
+      if (scrolling) {
+        scroll_to_latest_button.style.display =  "none";
+        scrollToBottom();
+      } else {
+        scroll_to_latest_button.style.display =  "inline-block";
+      }
 
       showConnectionError(false);
     })
@@ -144,6 +167,15 @@ function syncWithServer() {
       showConnectionError(true);
       console.log(error);
     });
+}
+
+function isLastQsoShown() {
+  const latestQso = callsignTable.lastChild || null;
+  const latestQsoOffsetY = latestQso ? latestQso.getBoundingClientRect().top : 0;
+  const clientHeight = document.querySelector('html').clientHeight;
+  const footerHeight = Number(getComputedStyle(document.documentElement).getPropertyValue('--footer-height').replace('px', ''));
+  const tableFrameBottomEdgeOffsetY = clientHeight - footerHeight;
+  return latestQso ? (tableFrameBottomEdgeOffsetY - latestQsoOffsetY > 0 ? true : false) : true;
 }
 
 function onRowClick(event) {

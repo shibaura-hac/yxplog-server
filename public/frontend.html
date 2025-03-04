@@ -13,6 +13,13 @@
             role="navigation"
             aria-label="main navigation"
         >
+            <progress
+                id="connection-error"
+                class="progress is-small is-danger"
+                max="100"
+            >
+                15%
+            </progress>
             <div class="navbar-brand">
                 <div class="navbar-item title is-4">yxplog</div>
             </div>
@@ -27,13 +34,6 @@
             </div>
         </nav>
         <div class="table-container">
-            <progress
-                id="connection-error"
-                class="progress is-small is-danger"
-                max="100"
-            >
-                15%
-            </progress>
             <table class="table is-fullwidth" id="callsign_table">
                 <thead class="is-fullwidth">
                     <tr>
@@ -52,6 +52,7 @@
             </table>
         </div>
         <footer class="footer is-fixed">
+            <button id="scroll-to-latest-button" class="button is-primary">↓ New QSO!</button>
             <form id="qso_form">
                 <div class="field has-addons">
                   <div class="columns" id="textboxes">

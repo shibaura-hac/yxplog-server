@@ -14,8 +14,11 @@
 }
 
 footer {
+    position: relative;
     bottom: 0;
     height: var(--footer-height);
+    text-align: center;
+    overflow: visible;
 }
 
 .table-container {
@@ -28,11 +31,20 @@ footer {
     position: sticky;
     position: -webkit-sticky;
     top: 50px;
-    background: inherit;
+    background-color: var(--bulma-table-background-color);
     z-index: 1;
+}
+
+#scroll-to-latest-button{
+    display: none;
+    position: absolute;
+    top: -3rem;
+    height: 2rem;
+    width: fit-content;
 }
 
 /*@media screen and (max-width: 768px) {
     #submit_button {
     }
 }*/
+

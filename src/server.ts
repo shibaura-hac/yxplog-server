@@ -2,8 +2,13 @@ import {
   Application,
   send,
 } from "https://deno.land/x/oak@v17.1.4/mod.ts";
-
 import { apiRouter } from "./api.ts";
+import { parseArgs } from "jsr:@std/cli/parse-args";
+
+const flags = parseArgs(Deno.args, {
+  string: ["port"],
+  default: { port: "8080"}
+})
 
 
 const app = new Application();
@@ -38,4 +43,4 @@ app.use(async (ctx, next) => {
 app.use(apiRouter.routes());
 app.use(apiRouter.allowedMethods());
 
-app.listen({ hostname: "0.0.0.0", port: 8090 });
+app.listen({ hostname: "0.0.0.0", port: flags.port });

@@ -1,5 +1,6 @@
 :root {
     --footer-height: 130px;
+    --bulma-column-gap: 0;
 }
 
 .is-fixed {
@@ -29,4 +30,9 @@ footer {
     top: 50px;
     background: inherit;
     z-index: 1;
- }
+}
+
+/*@media screen and (max-width: 768px) {
+    #submit_button {
+    }
+}*/

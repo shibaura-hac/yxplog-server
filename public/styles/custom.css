@@ -32,6 +32,32 @@ footer {
     z-index: 1;
 }
 
+#scroll-to-latest-button{
+    display: none;
+    position: absolute;
+    top: -3rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+#textboxes {
+  width: 90%;
+}
+
+div:has(>input[name="call"]) {
+  flex: 2;
+}
+div:has(>div:has(>select[name="band"])), div:has(>div:has(>select[name="mode"])) {
+  flex: 1;
+}
+div:has(>input[name="rrst"]), div:has(>input[name="srst"]) {
+  flex-basis: 20%;
+  flex-grow: 0;
+}
+div:has(>input[name="memo"]) {
+  flex: 1;
+}
+
 /*@media screen and (max-width: 768px) {
     #submit_button {
     }

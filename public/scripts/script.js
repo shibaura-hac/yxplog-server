@@ -61,12 +61,13 @@ function appendQSO(QSO) {
 }
 
 function scrollToBottom() {
-  document.querySelector(".table-container").scrollIntoView({
-      behavior: "smooth",
-      block: "end", //it sticks out a little...
-      inline: "nearest"
-    }
-  );
+  // document.querySelector(".table-container").scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "end", //it sticks out a little...
+  //     inline: "nearest"
+  //   }
+  // );
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   scroll_to_latest_button.style.display = "none";
 }
 

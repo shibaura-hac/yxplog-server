@@ -28,10 +28,10 @@ scroll_to_latest_button.addEventListener("click", () => {
 });
 
 function resetForm() {
-  const victims = [1, 4, 5, 6];
+  const victim_selectors = ['input[name="call"]', 'input[name="srst"]', 'input[name="rrst"]', 'input[name="memo"]'];
 
-  for (const victim of victims) {
-    document.querySelector(`div.control:nth-child(${victim}) > input`).value = "";
+  for (const selector of victim_selectors) {
+    document.querySelector(selector).value = "";
   }
 
   qso_form.querySelector("input[name=call]").focus();

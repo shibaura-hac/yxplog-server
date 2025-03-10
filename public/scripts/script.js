@@ -4,6 +4,8 @@ const server_url = window.location.origin;
 const qso_form = document.getElementById("qso_form");
 const scroll_to_latest_button = document.getElementById('scroll-to-latest-button');
 
+const required_fields = [ "call", "rrst", "srst" ]
+
 // fetch server data on load
 syncWithServer();
 
@@ -15,12 +17,17 @@ qso_form.addEventListener("submit", async (event) => {
 
   // register the data
   const values = getDataFromForm();
-  const result = await registerQSO(values);
+
+  console.log(values)
+
+  if (values != "error") {
+    registerQSO(values);
+    resetForm();
+  }
 
   // sync with server on registration
   // need to consider the flow: sync -> register -> reflect
   syncWithServer();
-  resetForm();
 });
 
 scroll_to_latest_button.addEventListener("click", () => {
@@ -31,7 +38,9 @@ function resetForm() {
   const victim_selectors = ['input[name="call"]', 'input[name="srst"]', 'input[name="rrst"]', 'input[name="memo"]'];
 
   for (const selector of victim_selectors) {
-    document.querySelector(selector).value = "";
+    let victim = document.querySelector(selector);
+    victim.value = "";
+    victim.classList.remove("is-danger");
   }
 
   qso_form.querySelector("input[name=call]").focus();
@@ -48,11 +57,17 @@ function getDataFromForm() {
   const inputs = qso_form.querySelectorAll(
     "input[name], select[name], textarea[name]",
   );
-  inputs.forEach((input) => {
+
+  for (const input of inputs) {
+    if (input.value == "" && required_fields.includes(input.name)) {
+      input.classList.add("is-danger")
+      return "error";
+    }
     values[input.name] = input.value;
-  });
+  }
 
   return values;
+
 }
 
 function appendQSO(QSO) {

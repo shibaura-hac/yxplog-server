@@ -37,7 +37,9 @@ function syncWithServer() {
     .then((data) => {
       table.appendEachQSO(data);
       if (scrolling) {
-        scrollButton.show();
+        if (data.length > 0) {
+          scrollButton.show();
+        }
       } else {
         scrollButton.hide();
         utils.scrollToBottom();

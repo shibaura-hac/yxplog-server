@@ -1,4 +1,4 @@
-import { required_fields } from "./const.js";
+import { required_fields } from "../const.js";
 
 export const qso_form = document.getElementById("qso_form");
 

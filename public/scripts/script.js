@@ -1,10 +1,9 @@
 import * as api from "./api.js";
-import * as form from "./form.js";
-import * as table from "./table.js";
+import * as form from "./components/form.js";
+import * as table from "./components/table.js";
 import * as utils from "./utils.js";
-import { scroll_to_latest_button } from "./const.js";
-
-// get some elements to use later
+import * as connectionIndicator from "./components/connectionIndicator.js";
+import * as scrollButton from "./components/scroll_button.js";
 
 // fetch server data on load
 syncWithServer();
@@ -18,8 +17,6 @@ form.qso_form.addEventListener("submit", async (event) => {
   // register the data
   const values = form.getData();
 
-  console.log(values);
-
   if (values != "error") {
     api.registerQSO(values);
     form.reset();
@@ -30,22 +27,9 @@ form.qso_form.addEventListener("submit", async (event) => {
   syncWithServer();
 });
 
-scroll_to_latest_button.addEventListener("click", () => {
-  utils.scrollToBottom();
-});
-
-// connection error indicator
-function showConnectionError(status) {
-  const display = status ? "inline" : "none";
-  document.querySelector("#connection-error").style.display = display;
-}
-
 function syncWithServer() {
   console.log("syncing with server...");
-  // TODO: come up with a better way to get the latest synced id
-
-  const scrolling = table.isLastQsoShown();
-
+  const scrolling = table.isScrolling();
   const latest_id = table.getLatestId();
 
   api
@@ -53,16 +37,14 @@ function syncWithServer() {
     .then((data) => {
       table.appendEachQSO(data);
       if (scrolling) {
-        scroll_to_latest_button.style.display = "none";
-        utils.scrollToBottom();
+        scrollButton.show();
       } else {
-        scroll_to_latest_button.style.display = "inline-block";
+        scrollButton.hide();
+        utils.scrollToBottom();
       }
-
-      showConnectionError(false);
+      connectionIndicator.hide();
     })
     .catch((error) => {
-      showConnectionError(true);
-      console.log(error);
+      connectionIndicator.show();
     });
 }

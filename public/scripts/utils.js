@@ -1,4 +1,4 @@
-import { scroll_to_latest_button } from "./const.js";
+import * as scrollButton from "./components/scroll_button.js";
 
 function idToLocalTime(id) {
   const date = new Date(id);
@@ -20,7 +20,6 @@ export function scrollToBottom() {
   //   }
   // );
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  scroll_to_latest_button.style.display = "none";
 }
 
 function onRowClick(event) {

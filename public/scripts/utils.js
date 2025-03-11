@@ -1,3 +1,5 @@
+import { emoji } from "./const.js";
+
 function idToLocalTime(id) {
   const date = new Date(id);
 
@@ -8,6 +10,14 @@ function idToLocalTime(id) {
   });
 
   return time;
+}
+
+export function country2emoji(country) {
+  if (country != null) {
+    return emoji[country["name"]];
+  } else {
+    return emoji["Unknown"];
+  }
 }
 
 export function scrollToBottom() {

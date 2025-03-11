@@ -13,6 +13,12 @@ export async function fetchServerData(since = NaN) {
   return await _post_data(url, data);
 }
 
+export async function callLookup(call) {
+  let response = await _post_data(`${server_url}/call-lookup`, [call]);
+
+  return response;
+}
+
 export async function _post_data(url, data) {
   try {
     const response = await fetch(url, {

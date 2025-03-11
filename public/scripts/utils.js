@@ -50,3 +50,14 @@ export function createRowFrom(QSO) {
 
   return row;
 }
+
+export function onScrollToBottom(callback) {
+  window.addEventListener("scroll", () => {
+    if (
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight
+    ) {
+      callback();
+    }
+  });
+}

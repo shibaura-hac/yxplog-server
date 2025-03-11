@@ -4,7 +4,8 @@ const callsignTable = document.getElementById("callsign-table-body");
 
 export function isScrolling() {
   return (
-    window.innerHeight + window.scrollY < document.documentElement.scrollHeight
+    window.innerHeight + window.scrollY <
+    document.documentElement.scrollHeight - 30
   );
 }
 

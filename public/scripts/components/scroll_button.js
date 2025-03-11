@@ -9,6 +9,10 @@ scroll_to_latest_button.addEventListener("click", () => {
   hide();
 });
 
+utils.onScrollToBottom(() => {
+  hide();
+});
+
 export function show() {
   scroll_to_latest_button.style.display = "inline-block";
 }

@@ -1,6 +1,6 @@
 import * as utils from "../utils.js";
 
-export const scroll_to_latest_button = document.getElementById(
+const scroll_to_latest_button = document.getElementById(
   "scroll-to-latest-button",
 );
 

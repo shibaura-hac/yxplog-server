@@ -1,5 +1,4 @@
-export const connectionErrorIndicator =
-  document.querySelector("#connection-error");
+const connectionErrorIndicator = document.querySelector("#connection-error");
 
 function _connectionError(status) {
   const display = status ? "inline" : "none";

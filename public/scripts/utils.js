@@ -1,5 +1,3 @@
-import * as scrollButton from "./components/scroll_button.js";
-
 function idToLocalTime(id) {
   const date = new Date(id);
 

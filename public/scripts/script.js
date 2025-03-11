@@ -36,6 +36,7 @@ function syncWithServer() {
     .fetchServerData(latest_id)
     .then((data) => {
       table.appendEachQSO(data);
+
       if (scrolling) {
         if (data.length > 0) {
           scrollButton.show();

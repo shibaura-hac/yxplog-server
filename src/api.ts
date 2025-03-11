@@ -60,7 +60,7 @@ apiRouter.post("/call-lookup", async (ctx: RouterContext) => {
 
   let request_body = await ctx.request.body.json()
 
-  let request = new Request("http://localhost:5173/api/lookup", {
+  let request = new Request("http://localhost:4173/api/lookup", {
     method: "POST",
     body: JSON.stringify(request_body),
   })

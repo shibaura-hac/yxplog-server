@@ -7,7 +7,7 @@ import { parseArgs } from "jsr:@std/cli/parse-args";
 
 const flags = parseArgs(Deno.args, {
   string: ["port"],
-  default: { port: "8080"}
+  default: { port: "8080" }
 })
 
 
@@ -29,6 +29,9 @@ app.use(async (ctx, next) => {
     const filePath = ctx.request.url.pathname.replace(ROOT_DIR_PATH, "");
     await send(ctx, filePath, {
       root: ROOT_DIR,
+      contentTypes: {
+        ".js": "application/javascript",
+      }
     });
   } else if (ctx.request.url.pathname == "/") {
     ctx.response.redirect("/public/frontend.html")

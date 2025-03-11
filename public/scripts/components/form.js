@@ -11,7 +11,10 @@ export function getData() {
   for (const input of inputs) {
     if (input.value == "" && required_fields.includes(input.name)) {
       input.classList.add("is-danger");
+      input.focus();
       return "error";
+    } else {
+      input.classList.remove("is-danger");
     }
     values[input.name] = input.value;
   }
@@ -30,7 +33,6 @@ export function reset() {
   for (const selector of victim_selectors) {
     let victim = document.querySelector(selector);
     victim.value = "";
-    victim.classList.remove("is-danger");
   }
 
   qso_form.querySelector("input[name=call]").focus();

@@ -55,3 +55,17 @@ apiRouter.post("/register", async (ctx: RouterContext) => {
 apiRouter.post("/edit", async (ctx: RouterContext) => {
   ctx.response.body = dbutils.edit(await ctx.request.body.json());
 });
+
+apiRouter.post("/call-lookup", async (ctx: RouterContext) => {
+
+  let request_body = await ctx.request.body.json()
+
+  let request = new Request("http://localhost:5173/api/lookup", {
+    method: "POST",
+    body: JSON.stringify(request_body),
+  })
+  let response = await (await fetch(request)).json()
+
+
+  ctx.response.body = response;
+});

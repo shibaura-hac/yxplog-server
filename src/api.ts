@@ -2,7 +2,7 @@ import {
   Router,
   RouterContext,
 } from "https://deno.land/x/oak@v17.1.4/mod.ts";
-import * as qso from "./utils.ts";
+import * as utils from "./utils.ts";
 import * as dbutils from "./dbutils.ts"
 
 export const apiRouter = new Router();
@@ -13,8 +13,8 @@ apiRouter.use((ctx, next) => {
 });
 
 apiRouter.post("/get", async (ctx: RouterContext) => {
-  const payload = await ctx.request.body.json();
-  ctx.response.body = dbutils.get(payload);
+  const get_options = await ctx.request.body.json();
+  ctx.response.body = dbutils.get(get_options);
 });
 
 apiRouter.post("/search", async (ctx: RouterContext) => {
@@ -24,32 +24,33 @@ apiRouter.post("/search", async (ctx: RouterContext) => {
 
 apiRouter.post("/register", async (ctx: RouterContext) => {
 
-  let _qso = await ctx.request.body.json();
-  const keys_not_present = qso.validate(_qso);
+  let receivedQSO = await ctx.request.body.json();
+  const keys_not_present = utils.validateQSO(receivedQSO);
 
-  if (keys_not_present.length === 0) {
-    // TODO: catch database error
+  if (keys_not_present.length > 0) {
+    const error_message = `keys not present: ${keys_not_present.join(", ")}`;
 
-    if (!("date" in _qso)) {
-      const today = qso.generateID();
-      _qso.id = today;
-    }
-
-    _qso.call = _qso.call.toUpperCase();
-
-    const result = await dbutils.register(_qso);
-
-    ctx.response.body = `{
-      "status": true,
-      "qso": ${JSON.stringify(_qso)}
-    }`;
-  } else {
-    console.log(`keys not present: ${keys_not_present.join(", ")}`)
+    console.log(error_message)
     ctx.response.body = `{
       "status": false,
-      "message": "keys not present: ${keys_not_present.join(", ")}"
+      "message": ${error_message}
     }`;
+    return
   }
+
+  if (!("date" in receivedQSO)) {
+    receivedQSO.id = utils.generateID();
+  }
+
+  receivedQSO.call = receivedQSO.call.toUpperCase();
+
+  const result = await dbutils.register(receivedQSO);
+
+  ctx.response.body = `{
+    "status": true,
+    "qso": ${JSON.stringify(receivedQSO)}
+  }`;
+
 });
 
 apiRouter.post("/edit", async (ctx: RouterContext) => {

@@ -7,7 +7,7 @@ const _keys_required = [
   "memo"
 ]
 
-export function validate(qso: Record<string, unknown>): Array<string> {
+export function validateQSO(qso: Record<string, unknown>): Array<string> {
   return _keys_required.filter((key) => !(key in qso));
 }
 

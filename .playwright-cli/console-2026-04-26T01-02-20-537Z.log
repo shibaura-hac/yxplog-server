@@ -1,0 +1,122 @@
+[      53ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8090/styles.css?__frsh_c=772ae2c50e848d04212c4f59dc6b5251b098f2a1:0
+[     189ms] [LOG] %c Fresh %c Connected to development server. background-color: #86efac; color: black color: inherit @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:192
+[     224ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8090/favicon.ico:0
+[     437ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8090/styles.css?__frsh_c=772ae2c50e848d04212c4f59dc6b5251b098f2a1:0
+[   45273ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   45273ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   45349ms] [LOG] %c Fresh %c Connection closed. Trying to reconnect... background-color: #86efac; color: black color: inherit @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:154
+[   45351ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   45503ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   45705ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   45959ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   46263ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   46615ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   47018ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   47472ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   47976ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   48479ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   49089ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   49846ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   50270ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   50270ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   50854ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   52116ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   53628ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   55272ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   55272ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   55395ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   57408ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   59446ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   60268ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   60268ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   61517ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   63584ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   65268ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   65268ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   65691ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   67834ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   70009ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   70270ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   70270ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   72230ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   74696ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   75270ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   75270ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   77233ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   79803ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   80269ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   80269ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   82350ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   85269ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   85269ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   86232ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   88823ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   90271ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   90271ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   93806ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[   95270ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[   95271ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[   99169ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[  100270ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[  100270ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[  104386ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[  105271ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[  105271ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[  109084ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[  110270ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[  110270ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[  115271ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[  115271ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[  115978ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[  120270ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[  120270ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[  120587ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[  125270ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[  125270ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[  125389ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[  129009ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[  130271ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[  130271ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[  134992ms] [ERROR] WebSocket connection to 'ws://localhost:8090/_frsh/alive' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/chunk-FJB666N2.js:174
+[  135269ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8090/api/get:0
+[  135269ms] [ERROR] TypeError: Failed to fetch
+    at fetchLogs (http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:418:30)
+    at http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:464:7 @ http://localhost:8090/_fresh/js/772ae2c50e848d04212c4f59dc6b5251b098f2a1/LogApp.js:445
+[  140759ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8090/styles.css?__frsh_c=06862b1076bc366eb8bd80daed8974c48882c4b2:0
+[  141242ms] [LOG] %c Fresh %c Connected to development server. background-color: #86efac; color: black color: inherit @ http://localhost:8090/_fresh/js/06862b1076bc366eb8bd80daed8974c48882c4b2/chunk-EC76RJ5D.js:192

@@ -1,0 +1,14 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5] [cursor=pointer]: yxplog
+      - generic [ref=e6]:
+        - generic [ref=e7] [cursor=pointer]: settings
+        - link "contests" [ref=e8] [cursor=pointer]:
+          - /url: /contests
+    - textbox "オペレーター名" [ref=e11]
+  - generic [ref=e13]:
+    - generic [ref=e14]:
+      - heading "Contests" [level=1] [ref=e15]
+      - button "Add contest" [ref=e16] [cursor=pointer]
+    - generic [ref=e18]: No contests defined.

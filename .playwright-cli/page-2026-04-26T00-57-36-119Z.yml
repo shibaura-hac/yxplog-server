@@ -1,0 +1,61 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - text: yxplog
+      - generic [ref=e5]: settingscontests
+    - textbox "オペレーター名" [ref=e8]
+  - table [ref=e11]:
+    - rowgroup [ref=e12]:
+      - row "Time Callsign Band Mode RST Received RST Sent Memo" [ref=e13]:
+        - columnheader "Time" [ref=e14]
+        - columnheader "Callsign" [ref=e15]
+        - columnheader "Band" [ref=e16]
+        - columnheader "Mode" [ref=e17]
+        - columnheader "RST Received" [ref=e18]
+        - columnheader "RST Sent" [ref=e19]
+        - columnheader "Memo" [ref=e20]
+    - rowgroup [ref=e21]:
+      - row "04/26 09:41 JA1YXP 3.5 SSB 59 59 test" [ref=e22]:
+        - cell "04/26 09:41" [ref=e23]
+        - cell "JA1YXP" [ref=e24]
+        - cell "3.5" [ref=e25]
+        - cell "SSB" [ref=e26]
+        - cell "59" [ref=e27]
+        - cell "59" [ref=e28]
+        - cell "test" [ref=e29]
+  - contentinfo [ref=e30]:
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]: Callsign
+        - textbox "JA1YXP" [active] [ref=e35]: 7J1RL
+      - generic [ref=e36]:
+        - generic [ref=e37]: Band
+        - combobox [ref=e38]:
+          - option "3.5"
+          - option "7" [selected]
+          - option "14"
+          - option "21"
+          - option "28"
+          - option "50"
+          - option "144"
+          - option "430"
+          - option "1200"
+          - option "2400"
+      - generic [ref=e39]:
+        - generic [ref=e40]: Mode
+        - combobox [ref=e41]:
+          - option "SSB"
+          - option "AM"
+          - option "FM"
+          - option "CW" [selected]
+          - option "RTTY"
+      - generic [ref=e42]:
+        - generic [ref=e43]: RST R
+        - textbox "59" [ref=e44]
+      - generic [ref=e45]:
+        - generic [ref=e46]: RST S
+        - textbox "59" [ref=e47]
+      - generic [ref=e48]:
+        - generic [ref=e49]: Memo
+        - textbox "..." [ref=e50]
+      - button "Submit" [ref=e52]

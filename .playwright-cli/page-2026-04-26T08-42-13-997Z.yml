@@ -1,0 +1,343 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "yxplog" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - generic [ref=e7]: Normal
+        - checkbox [ref=e8] [cursor=pointer]
+        - generic [ref=e9]: Contest
+      - generic [ref=e10]:
+        - link "settings" [ref=e11] [cursor=pointer]:
+          - /url: /settings
+        - link "contests" [ref=e12] [cursor=pointer]:
+          - /url: /contests
+        - link "status" [ref=e13] [cursor=pointer]:
+          - /url: /status
+    - textbox "オペレーター名" [ref=e16]
+  - table [ref=e19]:
+    - rowgroup [ref=e20]:
+      - row "Time Callsign Band Mode RST Received RST Sent Memo" [ref=e21]:
+        - columnheader "Time" [ref=e22]
+        - columnheader "Callsign" [ref=e23]
+        - columnheader "Band" [ref=e24]
+        - columnheader "Mode" [ref=e25]
+        - columnheader "RST Received" [ref=e26]
+        - columnheader "RST Sent" [ref=e27]
+        - columnheader "Memo" [ref=e28]
+    - rowgroup [ref=e29]:
+      - row "09/07 06:23 🇨🇳 BY7WZ 21 SSB 59 59 24" [ref=e30]:
+        - cell "09/07 06:23" [ref=e31]
+        - cell "🇨🇳 BY7WZ" [ref=e32]:
+          - generic [ref=e33]: 🇨🇳
+          - generic [ref=e34] [cursor=pointer]: BY7WZ
+        - cell "21" [ref=e35]:
+          - generic [ref=e36]: "21"
+        - cell "SSB" [ref=e37]:
+          - generic [ref=e38]: SSB
+        - cell "59" [ref=e39]
+        - cell "59" [ref=e40]
+        - cell "24" [ref=e41]
+      - row "09/07 06:32 🇵🇭 DV1K 21 SSB 59 59 29" [ref=e42]:
+        - cell "09/07 06:32" [ref=e43]
+        - cell "🇵🇭 DV1K" [ref=e44]:
+          - generic [ref=e45]: 🇵🇭
+          - generic [ref=e46] [cursor=pointer]: DV1K
+        - cell "21" [ref=e47]:
+          - generic [ref=e48]: "21"
+        - cell "SSB" [ref=e49]:
+          - generic [ref=e50]: SSB
+        - cell "59" [ref=e51]
+        - cell "59" [ref=e52]
+        - cell "29" [ref=e53]
+      - row "09/07 06:38 🇲🇾 9M6P 21 SSB 59 59 57" [ref=e54]:
+        - cell "09/07 06:38" [ref=e55]
+        - cell "🇲🇾 9M6P" [ref=e56]:
+          - generic [ref=e57]: 🇲🇾
+          - generic [ref=e58] [cursor=pointer]: 9M6P
+        - cell "21" [ref=e59]:
+          - generic [ref=e60]: "21"
+        - cell "SSB" [ref=e61]:
+          - generic [ref=e62]: SSB
+        - cell "59" [ref=e63]
+        - cell "59" [ref=e64]
+        - cell "57" [ref=e65]
+      - row "09/07 06:40 🇮🇩 YC5NBY 21 SSB 59 59 47" [ref=e66]:
+        - cell "09/07 06:40" [ref=e67]
+        - cell "🇮🇩 YC5NBY" [ref=e68]:
+          - generic [ref=e69]: 🇮🇩
+          - generic [ref=e70] [cursor=pointer]: YC5NBY
+        - cell "21" [ref=e71]:
+          - generic [ref=e72]: "21"
+        - cell "SSB" [ref=e73]:
+          - generic [ref=e74]: SSB
+        - cell "59" [ref=e75]
+        - cell "59" [ref=e76]
+        - cell "47" [ref=e77]
+      - row "09/07 06:46 🇨🇳 BA4SQI 21 SSB 59 59 49" [ref=e78]:
+        - cell "09/07 06:46" [ref=e79]
+        - cell "🇨🇳 BA4SQI" [ref=e80]:
+          - generic [ref=e81]: 🇨🇳
+          - generic [ref=e82] [cursor=pointer]: BA4SQI
+        - cell "21" [ref=e83]:
+          - generic [ref=e84]: "21"
+        - cell "SSB" [ref=e85]:
+          - generic [ref=e86]: SSB
+        - cell "59" [ref=e87]
+        - cell "59" [ref=e88]
+        - cell "49" [ref=e89]
+      - row "09/07 06:51 🇮🇩 YC2USS 21 SSB 59 59 35" [ref=e90]:
+        - cell "09/07 06:51" [ref=e91]
+        - cell "🇮🇩 YC2USS" [ref=e92]:
+          - generic [ref=e93]: 🇮🇩
+          - generic [ref=e94] [cursor=pointer]: YC2USS
+        - cell "21" [ref=e95]:
+          - generic [ref=e96]: "21"
+        - cell "SSB" [ref=e97]:
+          - generic [ref=e98]: SSB
+        - cell "59" [ref=e99]
+        - cell "59" [ref=e100]
+        - cell "35" [ref=e101]
+      - row "09/07 06:56 🇦🇺 VK4QRZ 21 SSB 59 59 62" [ref=e102]:
+        - cell "09/07 06:56" [ref=e103]
+        - cell "🇦🇺 VK4QRZ" [ref=e104]:
+          - generic [ref=e105]: 🇦🇺
+          - generic [ref=e106] [cursor=pointer]: VK4QRZ
+        - cell "21" [ref=e107]:
+          - generic [ref=e108]: "21"
+        - cell "SSB" [ref=e109]:
+          - generic [ref=e110]: SSB
+        - cell "59" [ref=e111]
+        - cell "59" [ref=e112]
+        - cell "62" [ref=e113]
+      - row "09/07 09:39 🇵🇭 DW9LSO 21 SSB 59 59 47" [ref=e114]:
+        - cell "09/07 09:39" [ref=e115]
+        - cell "🇵🇭 DW9LSO" [ref=e116]:
+          - generic [ref=e117]: 🇵🇭
+          - generic [ref=e118] [cursor=pointer]: DW9LSO
+        - cell "21" [ref=e119]:
+          - generic [ref=e120]: "21"
+        - cell "SSB" [ref=e121]:
+          - generic [ref=e122]: SSB
+        - cell "59" [ref=e123]
+        - cell "59" [ref=e124]
+        - cell "47" [ref=e125]
+      - row "09/07 13:20 🇷🇺 R4GM 21 SSB 59 59 51" [ref=e126]:
+        - cell "09/07 13:20" [ref=e127]
+        - cell "🇷🇺 R4GM" [ref=e128]:
+          - generic [ref=e129]: 🇷🇺
+          - generic [ref=e130] [cursor=pointer]: R4GM
+        - cell "21" [ref=e131]:
+          - generic [ref=e132]: "21"
+        - cell "SSB" [ref=e133]:
+          - generic [ref=e134]: SSB
+        - cell "59" [ref=e135]
+        - cell "59" [ref=e136]
+        - cell "51" [ref=e137]
+      - row "09/07 13:22 🇷🇺 UA1ANA 21 SSB 59 59 72" [ref=e138]:
+        - cell "09/07 13:22" [ref=e139]
+        - cell "🇷🇺 UA1ANA" [ref=e140]:
+          - generic [ref=e141]: 🇷🇺
+          - generic [ref=e142] [cursor=pointer]: UA1ANA
+        - cell "21" [ref=e143]:
+          - generic [ref=e144]: "21"
+        - cell "SSB" [ref=e145]:
+          - generic [ref=e146]: SSB
+        - cell "59" [ref=e147]
+        - cell "59" [ref=e148]
+        - cell "72" [ref=e149]
+      - row "09/07 13:28 🇱🇹 LY5W 21 SSB 59 59 57" [ref=e150]:
+        - cell "09/07 13:28" [ref=e151]
+        - cell "🇱🇹 LY5W" [ref=e152]:
+          - generic [ref=e153]: 🇱🇹
+          - generic [ref=e154] [cursor=pointer]: LY5W
+        - cell "21" [ref=e155]:
+          - generic [ref=e156]: "21"
+        - cell "SSB" [ref=e157]:
+          - generic [ref=e158]: SSB
+        - cell "59" [ref=e159]
+        - cell "59" [ref=e160]
+        - cell "57" [ref=e161]
+      - row "09/07 13:33 🇧🇾 EW5A 21 SSB 59 59 30" [ref=e162]:
+        - cell "09/07 13:33" [ref=e163]
+        - cell "🇧🇾 EW5A" [ref=e164]:
+          - generic [ref=e165]: 🇧🇾
+          - generic [ref=e166] [cursor=pointer]: EW5A
+        - cell "21" [ref=e167]:
+          - generic [ref=e168]: "21"
+        - cell "SSB" [ref=e169]:
+          - generic [ref=e170]: SSB
+        - cell "59" [ref=e171]
+        - cell "59" [ref=e172]
+        - cell "30" [ref=e173]
+      - row "09/07 13:43 🇷🇺 UC4L 21 SSB 59 59 64" [ref=e174]:
+        - cell "09/07 13:43" [ref=e175]
+        - cell "🇷🇺 UC4L" [ref=e176]:
+          - generic [ref=e177]: 🇷🇺
+          - generic [ref=e178] [cursor=pointer]: UC4L
+        - cell "21" [ref=e179]:
+          - generic [ref=e180]: "21"
+        - cell "SSB" [ref=e181]:
+          - generic [ref=e182]: SSB
+        - cell "59" [ref=e183]
+        - cell "59" [ref=e184]
+        - cell "64" [ref=e185]
+      - row "09/07 13:48 🇷🇺 RA9Y 7 SSB 59 59 01" [ref=e186]:
+        - cell "09/07 13:48" [ref=e187]
+        - cell "🇷🇺 RA9Y" [ref=e188]:
+          - generic [ref=e189]: 🇷🇺
+          - generic [ref=e190] [cursor=pointer]: RA9Y
+        - cell "7" [ref=e191]:
+          - generic [ref=e192]: "7"
+        - cell "SSB" [ref=e193]:
+          - generic [ref=e194]: SSB
+        - cell "59" [ref=e195]
+        - cell "59" [ref=e196]
+        - cell "01" [ref=e197]
+      - row "09/07 14:07 🇷🇺 R9YC 21 SSB 59 59 69" [ref=e198]:
+        - cell "09/07 14:07" [ref=e199]
+        - cell "🇷🇺 R9YC" [ref=e200]:
+          - generic [ref=e201]: 🇷🇺
+          - generic [ref=e202] [cursor=pointer]: R9YC
+        - cell "21" [ref=e203]:
+          - generic [ref=e204]: "21"
+        - cell "SSB" [ref=e205]:
+          - generic [ref=e206]: SSB
+        - cell "59" [ref=e207]
+        - cell "59" [ref=e208]
+        - cell "69" [ref=e209]
+      - row "09/07 17:26 🇧🇬 LZ5R 7 SSB 59 59 59" [ref=e210]:
+        - cell "09/07 17:26" [ref=e211]
+        - cell "🇧🇬 LZ5R" [ref=e212]:
+          - generic [ref=e213]: 🇧🇬
+          - generic [ref=e214] [cursor=pointer]: LZ5R
+        - cell "7" [ref=e215]:
+          - generic [ref=e216]: "7"
+        - cell "SSB" [ref=e217]:
+          - generic [ref=e218]: SSB
+        - cell "59" [ref=e219]
+        - cell "59" [ref=e220]
+        - cell "59" [ref=e221]
+      - row "09/07 17:45 🇷🇺 RW1F 7 SSB 59 59 50" [ref=e222]:
+        - cell "09/07 17:45" [ref=e223]
+        - cell "🇷🇺 RW1F" [ref=e224]:
+          - generic [ref=e225]: 🇷🇺
+          - generic [ref=e226] [cursor=pointer]: RW1F
+        - cell "7" [ref=e227]:
+          - generic [ref=e228]: "7"
+        - cell "SSB" [ref=e229]:
+          - generic [ref=e230]: SSB
+        - cell "59" [ref=e231]
+        - cell "59" [ref=e232]
+        - cell "50" [ref=e233]
+      - row "09/07 21:30 🇺🇸 N9RV 7 SSB 59 59 70" [ref=e234]:
+        - cell "09/07 21:30" [ref=e235]
+        - cell "🇺🇸 N9RV" [ref=e236]:
+          - generic [ref=e237]: 🇺🇸
+          - generic [ref=e238] [cursor=pointer]: N9RV
+        - cell "7" [ref=e239]:
+          - generic [ref=e240]: "7"
+        - cell "SSB" [ref=e241]:
+          - generic [ref=e242]: SSB
+        - cell "59" [ref=e243]
+        - cell "59" [ref=e244]
+        - cell "70" [ref=e245]
+      - row "09/07 21:31 🇺🇸 N9RV 21 SSB 59 59 70" [ref=e246]:
+        - cell "09/07 21:31" [ref=e247]
+        - cell "🇺🇸 N9RV" [ref=e248]:
+          - generic [ref=e249]: 🇺🇸
+          - generic [ref=e250] [cursor=pointer]: N9RV
+        - cell "21" [ref=e251]:
+          - generic [ref=e252]: "21"
+        - cell "SSB" [ref=e253]:
+          - generic [ref=e254]: SSB
+        - cell "59" [ref=e255]
+        - cell "59" [ref=e256]
+        - cell "70" [ref=e257]
+      - row "09/07 21:43 🇺🇸 N6WM 21 SSB 59 59 58" [ref=e258]:
+        - cell "09/07 21:43" [ref=e259]
+        - cell "🇺🇸 N6WM" [ref=e260]:
+          - generic [ref=e261]: 🇺🇸
+          - generic [ref=e262] [cursor=pointer]: N6WM
+        - cell "21" [ref=e263]:
+          - generic [ref=e264]: "21"
+        - cell "SSB" [ref=e265]:
+          - generic [ref=e266]: SSB
+        - cell "59" [ref=e267]
+        - cell "59" [ref=e268]
+        - cell "58" [ref=e269]
+  - contentinfo [ref=e270]:
+    - generic [ref=e272]:
+      - generic [ref=e273]:
+        - generic [ref=e275]: Callsign
+        - textbox "JA1YXP" [ref=e276]
+      - generic [ref=e277]:
+        - generic [ref=e279]: Band
+        - combobox [ref=e280] [cursor=pointer]:
+          - option "3.5" [selected]
+          - option "7"
+          - option "14"
+          - option "21"
+          - option "28"
+          - option "50"
+          - option "144"
+          - option "430"
+          - option "1200"
+          - option "2400"
+      - generic [ref=e281]:
+        - generic [ref=e283]: Mode
+        - combobox [ref=e284] [cursor=pointer]:
+          - option "SSB" [selected]
+          - option "AM"
+          - option "FM"
+          - option "CW"
+          - option "RTTY"
+      - generic [ref=e285]:
+        - generic [ref=e287]: RST R
+        - textbox "59" [ref=e288]
+      - generic [ref=e289]:
+        - generic [ref=e291]: RST S
+        - textbox "59" [ref=e292]
+      - generic [ref=e293]:
+        - generic [ref=e295]: Memo
+        - textbox "..." [ref=e296]
+      - button "Submit" [ref=e298] [cursor=pointer]
+  - generic [ref=e300]:
+    - generic [ref=e301]:
+      - generic [ref=e302]:
+        - generic [ref=e303]: 🇨🇳
+        - generic [ref=e304]:
+          - heading "BY7WZ" [level=3] [ref=e305]
+          - paragraph [ref=e306]: China
+      - generic [ref=e307]:
+        - link "QRZ.com" [ref=e308] [cursor=pointer]:
+          - /url: https://www.qrz.com/db/BY7WZ
+          - generic [ref=e309]: QRZ.com
+          - img [ref=e310]
+        - button "✕" [ref=e312] [cursor=pointer]
+    - generic [ref=e313]:
+      - generic [ref=e314]:
+        - heading "Contact History" [level=4] [ref=e315]
+        - table [ref=e317]:
+          - rowgroup [ref=e318]:
+            - row "Date Band Mode RST (R/S)" [ref=e319]:
+              - columnheader "Date" [ref=e320]
+              - columnheader "Band" [ref=e321]
+              - columnheader "Mode" [ref=e322]
+              - columnheader "RST (R/S)" [ref=e323]
+          - rowgroup [ref=e324]:
+            - row "9/7/2025 28 SSB 59/59" [ref=e325]:
+              - cell "9/7/2025" [ref=e326]
+              - cell "28" [ref=e327]:
+                - generic [ref=e328]: "28"
+              - cell "SSB" [ref=e329]:
+                - generic [ref=e330]: SSB
+              - cell "59/59" [ref=e331]
+            - row "9/7/2025 21 SSB 59/59" [ref=e332]:
+              - cell "9/7/2025" [ref=e333]
+              - cell "21" [ref=e334]:
+                - generic [ref=e335]: "21"
+              - cell "SSB" [ref=e336]:
+                - generic [ref=e337]: SSB
+              - cell "59/59" [ref=e338]
+      - button "Close" [ref=e340] [cursor=pointer]

@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "yxplog" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - link "settings" [ref=e7] [cursor=pointer]:
+          - /url: /settings
+        - link "contests" [ref=e8] [cursor=pointer]:
+          - /url: /contests
+    - textbox "オペレーター名" [ref=e11]
+  - generic [ref=e12]:
+    - heading "Settings" [level=1] [ref=e13]
+    - generic [ref=e15]:
+      - heading "General Configuration" [level=2] [ref=e16]
+      - generic [ref=e18]:
+        - generic [ref=e20]: Default Mode
+        - combobox [ref=e21] [cursor=pointer]:
+          - option "SSB" [selected]
+          - option "CW"
+          - option "FM"
+          - option "AM"
+          - option "RTTY"
+      - generic [ref=e22]:
+        - generic [ref=e24]: Polling Interval (ms)
+        - spinbutton [ref=e25]: "5000"
+      - button "Save Settings" [ref=e27] [cursor=pointer]
+    - generic [ref=e29]:
+      - heading "Danger Zone" [level=2] [ref=e30]
+      - paragraph [ref=e32]: "Warning: These actions are permanent and cannot be undone."
+      - generic [ref=e33]:
+        - button "Clear All Local Logs" [ref=e34] [cursor=pointer]
+        - button "Reset Database" [ref=e35] [cursor=pointer]

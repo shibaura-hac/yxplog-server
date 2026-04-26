@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "yxplog" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - generic [ref=e7]: Normal
+        - checkbox [ref=e8] [cursor=pointer]
+        - generic [ref=e9]: Contest
+      - generic [ref=e10]:
+        - link "settings" [ref=e11] [cursor=pointer]:
+          - /url: /settings
+        - link "contests" [ref=e12] [cursor=pointer]:
+          - /url: /contests
+        - link "status" [ref=e13] [cursor=pointer]:
+          - /url: /status
+    - textbox "オペレーター名" [ref=e16]
+  - generic [ref=e17]:
+    - heading "Server Status" [level=1] [ref=e18]
+    - generic [ref=e20]:
+      - heading "QSO Activity Over Time" [level=2] [ref=e21]
+      - table [ref=e24]:
+        - row [ref=e25]:
+          - cell
+          - cell [ref=e26]:
+            - link "Charting by TradingView" [ref=e30] [cursor=pointer]:
+              - /url: https://www.tradingview.com/?utm_medium=lwc-link&utm_campaign=lwc-chart&utm_source=localhost/status
+              - img [ref=e31]
+          - cell [ref=e35]
+        - row [ref=e39]:
+          - cell
+          - cell [ref=e40]
+          - cell [ref=e44]

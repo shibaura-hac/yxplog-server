@@ -1,0 +1,88 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "yxplog" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - generic [ref=e7]: Normal
+        - checkbox [ref=e8] [cursor=pointer]
+        - generic [ref=e9]: Contest
+      - generic [ref=e10]:
+        - link "settings" [ref=e11] [cursor=pointer]:
+          - /url: /settings
+        - link "contests" [ref=e12] [cursor=pointer]:
+          - /url: /contests
+        - link "status" [ref=e13] [cursor=pointer]:
+          - /url: /status
+    - textbox "オペレーター名" [ref=e16]
+  - generic [ref=e17]:
+    - heading "Server Status" [level=1] [ref=e18]
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: Uptime
+          - generic [ref=e24]: 0d 0h 0m 20s
+          - generic [ref=e25]: Since start
+        - generic [ref=e27]:
+          - generic [ref=e28]: Active Clients
+          - generic [ref=e29]: "1"
+          - generic [ref=e30]: In last 30s
+        - generic [ref=e32]:
+          - generic [ref=e33]: Total QSOs
+          - generic [ref=e34]: "20"
+          - generic [ref=e35]: Entries
+        - generic [ref=e37]:
+          - generic [ref=e38]: Uniques
+          - generic [ref=e39]: "20"
+          - generic [ref=e40]: Callsigns
+      - generic [ref=e41]:
+        - generic [ref=e43]:
+          - heading "Top 5 Callsigns" [level=2] [ref=e44]
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]:
+                - generic [ref=e48]: "1"
+                - generic [ref=e49] [cursor=pointer]: JJ1JQM
+              - generic [ref=e50]: 1 QSOs
+            - generic [ref=e51]:
+              - generic [ref=e52]:
+                - generic [ref=e53]: "2"
+                - generic [ref=e54] [cursor=pointer]: JR1DTN
+              - generic [ref=e55]: 1 QSOs
+            - generic [ref=e56]:
+              - generic [ref=e57]:
+                - generic [ref=e58]: "3"
+                - generic [ref=e59] [cursor=pointer]: JQ1BID
+              - generic [ref=e60]: 1 QSOs
+            - generic [ref=e61]:
+              - generic [ref=e62]:
+                - generic [ref=e63]: "4"
+                - generic [ref=e64] [cursor=pointer]: JJ1HTT
+              - generic [ref=e65]: 1 QSOs
+            - generic [ref=e66]:
+              - generic [ref=e67]:
+                - generic [ref=e68]: "5"
+                - generic [ref=e69] [cursor=pointer]: JE1QHP
+              - generic [ref=e70]: 1 QSOs
+        - generic [ref=e72]:
+          - heading "Top 5 Countries" [level=2] [ref=e73]
+          - generic [ref=e75]:
+            - generic [ref=e76]:
+              - generic [ref=e77]: "1"
+              - generic [ref=e78]: 🇯🇵
+              - generic [ref=e79]: Japan
+            - generic [ref=e80]: 20 QSOs
+    - generic [ref=e82]:
+      - heading "QSO Activity Over Time" [level=2] [ref=e83]
+      - table [ref=e86]:
+        - row [ref=e87]:
+          - cell
+          - cell [ref=e88]:
+            - link "Charting by TradingView" [ref=e92] [cursor=pointer]:
+              - /url: https://www.tradingview.com/?utm_medium=lwc-link&utm_campaign=lwc-chart&utm_source=localhost/status
+              - img [ref=e93]
+          - cell [ref=e97]
+        - row [ref=e101]:
+          - cell
+          - cell [ref=e102]
+          - cell [ref=e106]

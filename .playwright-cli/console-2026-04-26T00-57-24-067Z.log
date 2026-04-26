@@ -1,0 +1,2 @@
+[     222ms] [LOG] %c Fresh %c Connected to development server. background-color: #86efac; color: black color: inherit @ http://localhost:8090/_fresh/js/218b198db3a567bdc5fdc32520d1abc33959af89/chunk-NG2IPLG5.js:192
+[     232ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8090/favicon.ico:0

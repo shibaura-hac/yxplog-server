@@ -1,0 +1,5 @@
+[     183ms] [WARNING] cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation @ https://cdn.tailwindcss.com/:63
+[     264ms] [LOG] %c Fresh %c Connected to development server. background-color: #86efac; color: black color: inherit @ http://localhost:8091/_fresh/js/2765b274b022b6fc4a245547c7897602582293b4/chunk-YSD46ZVY.js:192
+[     298ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8091/favicon.ico:0
+[     308ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:8091/api/ip:0
+[     407ms] [ERROR] Failed to fetch IP SyntaxError: Unexpected token 'I', "Internal s"... is not valid JSON @ http://localhost:8091/_fresh/js/2765b274b022b6fc4a245547c7897602582293b4/LogApp.js:474

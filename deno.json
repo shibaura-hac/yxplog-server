@@ -1,6 +1,26 @@
 {
   "tasks": {
-    "start": "deno run --allow-net --allow-env --allow-write=./.db.json.tmp --allow-read=./.db.json.tmp --allow-read=./public --allow-read=./db.json --allow-write=./db.json ./src/server.ts",
-    "dev": "deno run --allow-net --allow-env --allow-write=./.db.json.tmp --allow-read=./.db.json.tmp --allow-read=./public --allow-read=./db.json --allow-write=./db.json ./src/server.ts --port 8090"
+    "start": "deno run -A main.ts",
+    "dev": "deno run -A dev.ts --port 8090",
+    "build": "deno run -A dev.ts build"
+  },
+  "imports": {
+    "fresh": "jsr:@fresh/core@2.3.0",
+    "fresh/dev": "jsr:@fresh/core@2.3.0/dev",
+    "fresh/runtime": "jsr:@fresh/core@2.3.0/runtime",
+    "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@1.0.0",
+    "preact": "npm:preact@10.29.1",
+    "preact/": "npm:/preact@10.29.1/",
+    "preact-render-to-string": "npm:preact-render-to-string@6.6.7",
+    "@std/cli": "jsr:@std/cli@1.0.13",
+    "@std/path": "jsr:@std/path@1.1.4",
+    "tailwindcss": "npm:tailwindcss@3.4.1",
+    "daisyui": "npm:daisyui@4.12.10",
+    "lightweight-charts": "npm:lightweight-charts@4.2.1",
+    "@std/csv": "jsr:@std/csv@^1.0.5"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   }
 }

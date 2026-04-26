@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "yxplog" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - generic [ref=e7]: Normal
+        - checkbox [ref=e8] [cursor=pointer]
+        - generic [ref=e9]: Contest
+      - generic [ref=e10]:
+        - link "settings" [ref=e11] [cursor=pointer]:
+          - /url: /settings
+        - link "contests" [ref=e12] [cursor=pointer]:
+          - /url: /contests
+    - textbox "オペレーター名" [ref=e15]
+  - table [ref=e18]:
+    - rowgroup [ref=e19]:
+      - row "Time Callsign Band Mode RST Received RST Sent Memo" [ref=e20]:
+        - columnheader "Time" [ref=e21]
+        - columnheader "Callsign" [ref=e22]
+        - columnheader "Band" [ref=e23]
+        - columnheader "Mode" [ref=e24]
+        - columnheader "RST Received" [ref=e25]
+        - columnheader "RST Sent" [ref=e26]
+        - columnheader "Memo" [ref=e27]
+    - rowgroup [ref=e28]:
+      - row "No logs found." [ref=e29]:
+        - cell "No logs found." [ref=e30]
+  - contentinfo [ref=e31]:
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e36]: Callsign
+        - textbox "JA1YXP" [ref=e37]
+      - generic [ref=e38]:
+        - generic [ref=e40]: Band
+        - combobox [ref=e41] [cursor=pointer]:
+          - option "3.5" [selected]
+          - option "7"
+          - option "14"
+          - option "21"
+          - option "28"
+          - option "50"
+          - option "144"
+          - option "430"
+          - option "1200"
+          - option "2400"
+      - generic [ref=e42]:
+        - generic [ref=e44]: Mode
+        - combobox [ref=e45] [cursor=pointer]:
+          - option "SSB" [selected]
+          - option "AM"
+          - option "FM"
+          - option "CW"
+          - option "RTTY"
+      - generic [ref=e46]:
+        - generic [ref=e48]: RST R
+        - textbox "59" [ref=e49]
+      - generic [ref=e50]:
+        - generic [ref=e52]: RST S
+        - textbox "59" [ref=e53]
+      - generic [ref=e54]:
+        - generic [ref=e56]: Memo
+        - textbox "..." [ref=e57]
+      - button "Submit" [ref=e59] [cursor=pointer]

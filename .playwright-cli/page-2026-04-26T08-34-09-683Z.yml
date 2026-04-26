@@ -1,0 +1,134 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "yxplog" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - generic [ref=e7]: Normal
+        - checkbox [ref=e8] [cursor=pointer]
+        - generic [ref=e9]: Contest
+      - generic [ref=e10]:
+        - link "settings" [ref=e11] [cursor=pointer]:
+          - /url: /settings
+        - link "contests" [ref=e12] [cursor=pointer]:
+          - /url: /contests
+        - link "status" [ref=e13] [cursor=pointer]:
+          - /url: /status
+    - textbox "オペレーター名" [ref=e16]
+  - generic [ref=e17]:
+    - heading "Server Status" [level=1] [ref=e18]
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: Uptime
+          - generic [ref=e52]: 0d 0h 0m 21s
+          - generic [ref=e53]: Since start
+        - generic [ref=e55]:
+          - generic [ref=e56]: Active Clients
+          - generic [ref=e57]: "1"
+          - generic [ref=e58]: In last 30s
+        - generic [ref=e60]:
+          - generic [ref=e61]: Total QSOs
+          - generic [ref=e62]: "20"
+          - generic [ref=e63]: Entries
+        - generic [ref=e65]:
+          - generic [ref=e66]: Uniques
+          - generic [ref=e67]: "20"
+          - generic [ref=e68]: Callsigns
+      - generic [ref=e69]:
+        - generic [ref=e71]:
+          - heading "Top 5 Callsigns" [level=2] [ref=e72]
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - generic [ref=e75]:
+                - generic [ref=e76]: "1"
+                - generic [ref=e77] [cursor=pointer]: JJ1JQM
+              - generic [ref=e78]: 1 QSOs
+            - generic [ref=e79]:
+              - generic [ref=e80]:
+                - generic [ref=e81]: "2"
+                - generic [ref=e82] [cursor=pointer]: JR1DTN
+              - generic [ref=e83]: 1 QSOs
+            - generic [ref=e84]:
+              - generic [ref=e85]:
+                - generic [ref=e86]: "3"
+                - generic [ref=e87] [cursor=pointer]: JQ1BID
+              - generic [ref=e88]: 1 QSOs
+            - generic [ref=e89]:
+              - generic [ref=e90]:
+                - generic [ref=e91]: "4"
+                - generic [ref=e92] [cursor=pointer]: JJ1HTT
+              - generic [ref=e93]: 1 QSOs
+            - generic [ref=e94]:
+              - generic [ref=e95]:
+                - generic [ref=e96]: "5"
+                - generic [ref=e97] [cursor=pointer]: JE1QHP
+              - generic [ref=e98]: 1 QSOs
+        - generic [ref=e100]:
+          - heading "Top 5 Countries" [level=2] [ref=e101]
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - generic [ref=e105]: "1"
+              - generic [ref=e106]: 🇯🇵
+              - generic [ref=e107]: Japan
+            - generic [ref=e108]: 20 QSOs
+      - generic [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e113]: 🇯🇵
+            - generic [ref=e114]:
+              - heading "JJ1JQM" [level=3] [ref=e115]
+              - paragraph [ref=e116]: Japan
+          - generic [ref=e117]:
+            - link "QRZ.com" [ref=e118] [cursor=pointer]:
+              - /url: https://www.qrz.com/db/JJ1JQM
+              - generic [ref=e119]: QRZ.com
+              - img [ref=e120]
+            - button "✕" [ref=e122] [cursor=pointer]
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - heading "Contact History" [level=4] [ref=e125]
+            - table [ref=e127]:
+              - rowgroup [ref=e128]:
+                - row "Date Band Mode RST (R/S)" [ref=e129]:
+                  - columnheader "Date" [ref=e130]
+                  - columnheader "Band" [ref=e131]
+                  - columnheader "Mode" [ref=e132]
+                  - columnheader "RST (R/S)" [ref=e133]
+              - rowgroup [ref=e134]:
+                - row "8/3/2025 7 CW 599/599" [ref=e135]:
+                  - cell "8/3/2025" [ref=e136]
+                  - cell "7" [ref=e137]:
+                    - generic [ref=e138]: "7"
+                  - cell "CW" [ref=e139]:
+                    - generic [ref=e140]: CW
+                  - cell "599/599" [ref=e141]
+                - row "8/3/2025 7 CW 599/599" [ref=e142]:
+                  - cell "8/3/2025" [ref=e143]
+                  - cell "7" [ref=e144]:
+                    - generic [ref=e145]: "7"
+                  - cell "CW" [ref=e146]:
+                    - generic [ref=e147]: CW
+                  - cell "599/599" [ref=e148]
+                - row "8/3/2025 7 CW 599/599" [ref=e149]:
+                  - cell "8/3/2025" [ref=e150]
+                  - cell "7" [ref=e151]:
+                    - generic [ref=e152]: "7"
+                  - cell "CW" [ref=e153]:
+                    - generic [ref=e154]: CW
+                  - cell "599/599" [ref=e155]
+          - button "Close" [ref=e157] [cursor=pointer]
+    - generic [ref=e20]:
+      - heading "QSO Activity Over Time" [level=2] [ref=e21]
+      - table [ref=e24]:
+        - row [ref=e25]:
+          - cell
+          - cell [ref=e26]:
+            - link "Charting by TradingView" [ref=e30] [cursor=pointer]:
+              - /url: https://www.tradingview.com/?utm_medium=lwc-link&utm_campaign=lwc-chart&utm_source=localhost/status
+              - img [ref=e31]
+          - cell [ref=e35]
+        - row [ref=e39]:
+          - cell
+          - cell [ref=e40]
+          - cell [ref=e44]

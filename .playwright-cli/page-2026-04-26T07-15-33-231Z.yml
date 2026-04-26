@@ -1,0 +1,36 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "yxplog" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - generic [ref=e7]: Normal
+        - checkbox [ref=e8] [cursor=pointer]
+        - generic [ref=e9]: Contest
+      - generic [ref=e10]:
+        - link "settings" [ref=e11] [cursor=pointer]:
+          - /url: /settings
+        - link "contests" [ref=e12] [cursor=pointer]:
+          - /url: /contests
+        - link "status" [ref=e13] [cursor=pointer]:
+          - /url: /status
+    - textbox "オペレーター名" [ref=e16]
+  - generic [ref=e17]:
+    - heading "Server Status" [level=1] [ref=e18]
+    - generic [ref=e19]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: Server Uptime
+        - generic [ref=e23]: 0d 0h 0m 53s
+        - generic [ref=e24]: Since last restart
+      - generic [ref=e26]:
+        - generic [ref=e27]: Active Clients
+        - generic [ref=e28]: "1"
+        - generic [ref=e29]: Active in last 30s
+      - generic [ref=e31]:
+        - generic [ref=e32]: Total QSOs
+        - generic [ref=e33]: "5"
+        - generic [ref=e34]: In current database
+      - generic [ref=e36]:
+        - generic [ref=e37]: Unique Callsigns
+        - generic [ref=e38]: "3"
+        - generic [ref=e39]: Distinct stations logged

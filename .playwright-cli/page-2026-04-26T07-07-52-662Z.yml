@@ -1,0 +1,112 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "yxplog" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - generic [ref=e7]: Normal
+        - checkbox [checked] [active] [ref=e8] [cursor=pointer]
+        - generic [ref=e9]: Contest
+      - generic [ref=e10]:
+        - link "settings" [ref=e11] [cursor=pointer]:
+          - /url: /settings
+        - link "contests" [ref=e12] [cursor=pointer]:
+          - /url: /contests
+    - textbox "オペレーター名" [ref=e15]
+  - table [ref=e18]:
+    - rowgroup [ref=e19]:
+      - row "Time Callsign Band Mode RST Received Operator Memo" [ref=e110]:
+        - columnheader "Time" [ref=e21]
+        - columnheader "Callsign" [ref=e22]
+        - columnheader "Band" [ref=e23]
+        - columnheader "Mode" [ref=e24]
+        - columnheader "RST Received" [ref=e25]
+        - columnheader "Operator" [ref=e111]
+        - columnheader "Memo" [ref=e27]
+    - rowgroup [ref=e28]:
+      - row "04/26 09:41 JA1YXP 3.5 SSB 59 N/A test" [ref=e112]:
+        - cell "04/26 09:41" [ref=e61]
+        - cell "JA1YXP" [ref=e62]
+        - cell "3.5" [ref=e63]:
+          - generic [ref=e64]: "3.5"
+        - cell "SSB" [ref=e65]:
+          - generic [ref=e66]: SSB
+        - cell "59" [ref=e67]
+        - cell "N/A" [ref=e113]
+        - cell "test" [ref=e69]
+      - row "04/26 09:57 7J1RL 7 CW 599 N/A playwright test" [ref=e114]:
+        - cell "04/26 09:57" [ref=e71]
+        - cell "7J1RL" [ref=e72]
+        - cell "7" [ref=e73]:
+          - generic [ref=e74]: "7"
+        - cell "CW" [ref=e75]:
+          - generic [ref=e76]: CW
+        - cell "599" [ref=e77]
+        - cell "N/A" [ref=e115]
+        - cell "playwright test" [ref=e79]
+      - row "04/26 10:09 JA1YXP 3.5 SSB 59 N/A test" [ref=e116]:
+        - cell "04/26 10:09" [ref=e81]
+        - cell "JA1YXP" [ref=e82]
+        - cell "3.5" [ref=e83]:
+          - generic [ref=e84]: "3.5"
+        - cell "SSB" [ref=e85]:
+          - generic [ref=e86]: SSB
+        - cell "59" [ref=e87]
+        - cell "N/A" [ref=e117]
+        - cell "test" [ref=e89]
+      - row "04/26 10:10 JA1YXP 3.5 SSB 59 N/A test" [ref=e118]:
+        - cell "04/26 10:10" [ref=e91]
+        - cell "JA1YXP" [ref=e92]
+        - cell "3.5" [ref=e93]:
+          - generic [ref=e94]: "3.5"
+        - cell "SSB" [ref=e95]:
+          - generic [ref=e96]: SSB
+        - cell "59" [ref=e97]
+        - cell "N/A" [ref=e119]
+        - cell "test" [ref=e99]
+      - row "04/26 10:13 JA1ZGP 3.5 SSB 59 N/A test" [ref=e120]:
+        - cell "04/26 10:13" [ref=e101]
+        - cell "JA1ZGP" [ref=e102]
+        - cell "3.5" [ref=e103]:
+          - generic [ref=e104]: "3.5"
+        - cell "SSB" [ref=e105]:
+          - generic [ref=e106]: SSB
+        - cell "59" [ref=e107]
+        - cell "N/A" [ref=e121]
+        - cell "test" [ref=e109]
+  - contentinfo [ref=e31]:
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e36]: Callsign
+        - textbox "JA1YXP" [ref=e37]
+      - generic [ref=e38]:
+        - generic [ref=e40]: Band
+        - combobox [ref=e41] [cursor=pointer]:
+          - option "3.5" [selected]
+          - option "7"
+          - option "14"
+          - option "21"
+          - option "28"
+          - option "50"
+          - option "144"
+          - option "430"
+          - option "1200"
+          - option "2400"
+      - generic [ref=e42]:
+        - generic [ref=e44]: Mode
+        - combobox [ref=e45] [cursor=pointer]:
+          - option "SSB" [selected]
+          - option "AM"
+          - option "FM"
+          - option "CW"
+          - option "RTTY"
+      - generic [ref=e46]:
+        - generic [ref=e48]: RST R
+        - textbox "59" [ref=e49]
+      - generic [ref=e50]:
+        - generic [ref=e52]: RST S
+        - textbox "59" [ref=e53]
+      - generic [ref=e54]:
+        - generic [ref=e56]: Memo
+        - textbox "..." [ref=e57]
+      - button "Submit" [ref=e59] [cursor=pointer]

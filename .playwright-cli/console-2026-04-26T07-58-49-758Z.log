@@ -1,0 +1,3 @@
+[     364ms] [WARNING] cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation @ https://cdn.tailwindcss.com/:63
+[     473ms] [LOG] %c Fresh %c Connected to development server. background-color: #86efac; color: black color: inherit @ http://localhost:8091/_fresh/js/d4a88f44e79f68d019039ad324cf5c59de8503fb/chunk-KF4ZSGI5.js:192
+[     475ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8091/favicon.ico:0

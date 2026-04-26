@@ -1,0 +1,2 @@
+[      88ms] [WARNING] cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation @ https://cdn.tailwindcss.com/:63
+[     192ms] [LOG] %c Fresh %c Connected to development server. background-color: #86efac; color: black color: inherit @ http://localhost:8091/_fresh/js/23e30bf52964620ae42967f87559688b51fe63f6/chunk-W7IXCIEF.js:192

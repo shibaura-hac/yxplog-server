@@ -1,0 +1,7 @@
+[     240ms] [WARNING] cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation @ https://cdn.tailwindcss.com/:63
+[     415ms] [LOG] %c Fresh %c Connected to development server. background-color: #86efac; color: black color: inherit @ http://localhost:8090/_fresh/js/22c2ae67ab644faee6c1e17ead649a581bae845c/chunk-ELBB32TC.js:192
+[     415ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8090/favicon.ico:0
+[    1772ms] [WARNING] cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation @ https://cdn.tailwindcss.com/:63
+[    1876ms] [LOG] %c Fresh %c Connected to development server. background-color: #86efac; color: black color: inherit @ http://localhost:8090/_fresh/js/22c2ae67ab644faee6c1e17ead649a581bae845c/chunk-ELBB32TC.js:192
+[    4073ms] [WARNING] cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation @ https://cdn.tailwindcss.com/:63
+[    4170ms] [LOG] %c Fresh %c Connected to development server. background-color: #86efac; color: black color: inherit @ http://localhost:8090/_fresh/js/22c2ae67ab644faee6c1e17ead649a581bae845c/chunk-ELBB32TC.js:192

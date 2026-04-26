@@ -1,0 +1,11 @@
+[     190ms] [WARNING] cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation @ https://cdn.tailwindcss.com/:63
+[     347ms] [LOG] %c Fresh %c Connected to development server. background-color: #86efac; color: black color: inherit @ http://localhost:8091/_fresh/js/37be9364b12ef46522205cbf98450092c31333bb/chunk-INQTIVXS.js:192
+[     367ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8091/favicon.ico:0
+[     771ms] [WARNING] Add @babel/plugin-transform-react-jsx-source to get a more detailed component stack. Note that you should not add it to production builds of your App for bundle size reasons. @ http://localhost:8091/_fresh/js/37be9364b12ef46522205cbf98450092c31333bb/fresh-runtime.js:56
+[     771ms] [ERROR] Following component has two or more children with the same key attribute: "1754199781000". This may cause glitches and misbehavior in rendering process. Component: 
+
+<Fragment>..</Fragment>
+
+  in Fragment
+  in StationModal (at islands/StatusView.tsx:98)
+ @ http://localhost:8091/_fresh/js/37be9364b12ef46522205cbf98450092c31333bb/fresh-runtime.js:240

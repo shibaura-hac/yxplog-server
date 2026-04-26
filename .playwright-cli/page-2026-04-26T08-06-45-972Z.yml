@@ -1,0 +1,30 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "yxplog" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - generic [ref=e7]: Normal
+        - checkbox [ref=e8] [cursor=pointer]
+        - generic [ref=e9]: Contest
+      - generic [ref=e10]:
+        - link "settings" [ref=e11] [cursor=pointer]:
+          - /url: /settings
+        - link "contests" [ref=e12] [cursor=pointer]:
+          - /url: /contests
+        - link "status" [ref=e13] [cursor=pointer]:
+          - /url: /status
+    - textbox "オペレーター名" [ref=e16]
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - heading "Contests" [level=1] [ref=e20]
+      - button "Add contest" [ref=e21] [cursor=pointer]
+    - generic [ref=e24]:
+      - heading "Test Contest 2026 (2026)" [level=2] [ref=e25]
+      - paragraph [ref=e26]: "Type: allja"
+      - paragraph [ref=e27]: "Start: 4/26/2026, 10:00:00 AM"
+      - paragraph [ref=e28]: "End: 4/26/2026, 10:00:00 PM"
+      - generic [ref=e29]:
+        - button "Download" [ref=e30] [cursor=pointer]
+        - button "Details" [ref=e31] [cursor=pointer]
+        - button "Delete" [ref=e32] [cursor=pointer]

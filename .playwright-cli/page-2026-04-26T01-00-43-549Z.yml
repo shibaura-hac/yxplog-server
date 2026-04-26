@@ -1,0 +1,69 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - text: yxplog
+      - generic [ref=e5]: settingscontests
+    - textbox "オペレーター名" [ref=e8]
+  - table [ref=e11]:
+    - rowgroup [ref=e12]:
+      - row "Time Callsign Band Mode RST Received RST Sent Memo" [ref=e13]:
+        - columnheader "Time" [ref=e14]
+        - columnheader "Callsign" [ref=e15]
+        - columnheader "Band" [ref=e16]
+        - columnheader "Mode" [ref=e17]
+        - columnheader "RST Received" [ref=e18]
+        - columnheader "RST Sent" [ref=e19]
+        - columnheader "Memo" [ref=e20]
+    - rowgroup [ref=e21]:
+      - row "04/26 09:41 JA1YXP 3.5 SSB 59 59 test" [ref=e22]:
+        - cell "04/26 09:41" [ref=e23]
+        - cell "JA1YXP" [ref=e24]
+        - cell "3.5" [ref=e25]
+        - cell "SSB" [ref=e26]
+        - cell "59" [ref=e27]
+        - cell "59" [ref=e28]
+        - cell "test" [ref=e29]
+      - row "04/26 09:57 7J1RL 7 CW 599 599 playwright test" [ref=e30]:
+        - cell "04/26 09:57" [ref=e31]
+        - cell "7J1RL" [ref=e32]
+        - cell "7" [ref=e33]
+        - cell "CW" [ref=e34]
+        - cell "599" [ref=e35]
+        - cell "599" [ref=e36]
+        - cell "playwright test" [ref=e37]
+  - contentinfo [ref=e38]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]: Callsign
+        - textbox "JA1YXP" [ref=e43]
+      - generic [ref=e44]:
+        - generic [ref=e45]: Band
+        - combobox [ref=e46]:
+          - option "3.5" [selected]
+          - option "7"
+          - option "14"
+          - option "21"
+          - option "28"
+          - option "50"
+          - option "144"
+          - option "430"
+          - option "1200"
+          - option "2400"
+      - generic [ref=e47]:
+        - generic [ref=e48]: Mode
+        - combobox [ref=e49]:
+          - option "SSB" [selected]
+          - option "AM"
+          - option "FM"
+          - option "CW"
+          - option "RTTY"
+      - generic [ref=e50]:
+        - generic [ref=e51]: RST R
+        - textbox "59" [ref=e52]
+      - generic [ref=e53]:
+        - generic [ref=e54]: RST S
+        - textbox "59" [ref=e55]
+      - generic [ref=e56]:
+        - generic [ref=e57]: Memo
+        - textbox "..." [ref=e58]
+      - button "Submit" [ref=e60]

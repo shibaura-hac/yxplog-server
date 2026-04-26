@@ -1,2 +1,4 @@
 .vscode/
+contests_data/
+*.csv
 db.json

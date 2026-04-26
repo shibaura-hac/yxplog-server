@@ -14,3 +14,9 @@ API Design: https://gist.github.com/alpaca-honke/04a775060111d94ac1d0ada242471a4
 
 ## Dark Mode
 ![image](./screenshots/2.png)
+
+## Status Page (with metrics and activity chart)
+![image](./screenshots/status.png)
+
+## Contests Management
+![image](./screenshots/contests.png)

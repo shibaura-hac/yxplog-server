@@ -1,0 +1,130 @@
+{
+  "contractVersion": 1,
+  "generatedAt": "2026-10-07",
+  "profiles": [
+    {
+      "profileId": "all-ja-2026",
+      "category": { "categoryCode": "CAM", "categoryLabel": "CW single operator all band" },
+      "exchangeTimeZone": "Asia/Tokyo",
+      "outputFormat": "jarl-r2.1",
+      "qsos": [
+        { "id": 1777122000000, "call": "JA2AAA", "band": "7", "mode": "CW", "srst": "599", "rrst": "599", "sentNumber": "10", "receivedNumber": "11", "contactedStation": { "domesticMultiplier": "11" } },
+        { "id": 1777122600000, "call": "JA2AAA", "band": "7", "mode": "SSB", "srst": "59", "rrst": "59", "sentNumber": "10", "receivedNumber": "11", "contactedStation": { "domesticMultiplier": "11" }, "expectedDisposition": "duplicate" },
+        { "id": 1777123200000, "call": "JA2AAA", "band": "3.5", "mode": "CW", "srst": "599", "rrst": "599", "sentNumber": "10", "receivedNumber": "11", "contactedStation": { "domesticMultiplier": "11" } }
+      ],
+      "expectedScore": { "qsoPoints": 2, "multiplierCount": 2, "total": 4 }
+    },
+    {
+      "profileId": "all-ja1-2026",
+      "category": { "categoryLabel": "individual digital, area 1" },
+      "exchangeTimeZone": "Asia/Tokyo",
+      "outputFormat": "jarl-r2.1",
+      "qsos": [
+        { "id": 1782534600000, "call": "JA1AAA", "band": "7", "mode": "FT8", "srst": "599", "rrst": "599", "sentNumber": "08 100101", "receivedNumber": "08 100102", "contactedStation": { "domesticMultiplier": "100102" } }
+      ],
+      "expectedScore": { "qsoPoints": 1, "multiplierCount": 1, "operatorCount": 1, "total": 1 }
+    },
+    {
+      "profileId": "six-meter-and-down-2026",
+      "category": { "categoryCode": "X144", "categoryLabel": "mixed single operator 144 MHz" },
+      "exchangeTimeZone": "Asia/Tokyo",
+      "outputFormat": "jarl-r2.1",
+      "qsos": [
+        { "id": 1783170000000, "call": "JA2AAA", "band": "144", "mode": "CW", "srst": "599", "rrst": "599", "sentNumber": "100116", "receivedNumber": "100117", "contactedStation": { "domesticMultiplier": "100117" } },
+        { "id": 1783170600000, "call": "JA2BBB", "band": "2400", "mode": "SSB", "srst": "59", "rrst": "59", "sentNumber": "100116", "receivedNumber": "120101", "contactedStation": { "domesticMultiplier": "120101" } }
+      ],
+      "expectedScore": { "qsoPoints": 3, "multiplierCount": 2, "total": 6 }
+    },
+    {
+      "profileId": "field-day-2026",
+      "category": { "categoryLabel": "single operator, field day station A" },
+      "exchangeTimeZone": "Asia/Tokyo",
+      "outputFormat": "jarl-r2.1",
+      "entryAttributes": { "stationClass": "A", "powerSupply": "battery" },
+      "qsos": [
+        { "id": 1785590000000, "call": "JA2AAA", "band": "7", "mode": "CW", "srst": "599", "rrst": "599", "sentNumber": "10L", "receivedNumber": "11M", "contactedStation": { "domesticMultiplier": "11" } }
+      ],
+      "expectedScore": { "qsoPoints": 1, "multiplierCount": 1, "stationCoefficient": 2, "total": 2 }
+    },
+    {
+      "profileId": "all-asian-dx-cw-2026",
+      "category": { "categoryCode": "SOABLP", "categoryLabel": "single operator all band low power" },
+      "exchangeTimeZone": "UTC",
+      "outputFormat": "jarl-r2.1",
+      "entryAttributes": { "operatorAgeAtStart": 42 },
+      "qsos": [
+        { "id": 1781920000000, "call": "W1AAA", "band": "14", "mode": "CW", "srst": "599", "rrst": "599", "sentNumber": "25", "receivedNumber": "05", "contactedStation": { "dxccEntity": "K", "cqZone": 5, "continent": "NA" } }
+      ],
+      "expectedScore": { "qsoPoints": 3, "multiplierCount": 1, "total": 3 }
+    },
+    {
+      "profileId": "all-asian-dx-phone-2026",
+      "category": { "categoryCode": "SOABLP", "categoryLabel": "single operator all band low power" },
+      "exchangeTimeZone": "UTC",
+      "outputFormat": "jarl-r2.1",
+      "entryAttributes": { "operatorAgeAtStart": 42 },
+      "qsos": [
+        { "id": 1788570000000, "call": "W1AAA", "band": "14", "mode": "SSB", "srst": "59", "rrst": "59", "sentNumber": "25", "receivedNumber": "05", "contactedStation": { "dxccEntity": "K", "cqZone": 5, "continent": "NA" } }
+      ],
+      "expectedScore": { "qsoPoints": 3, "multiplierCount": 1, "total": 3 }
+    },
+    {
+      "profileId": "all-city-all-gun-2026",
+      "category": { "categoryCode": "X144", "categoryLabel": "mixed single operator 144 MHz" },
+      "exchangeTimeZone": "Asia/Tokyo",
+      "outputFormat": "jarl-r2.1",
+      "qsos": [
+        { "id": 1791637200000, "call": "JA2AAA", "band": "144", "mode": "CW", "srst": "599", "rrst": "599", "sentNumber": "100116M", "receivedNumber": "100117M", "contactedStation": { "domesticMultiplier": "100117" } }
+      ],
+      "expectedScore": { "qsoPoints": 1, "multiplierCount": 1, "total": 1 }
+    },
+    {
+      "profileId": "cq-ww-dx-cw-2026",
+      "category": { "categoryLabel": "single operator, all band, low power" },
+      "cabrilloCategory": { "operator": "SINGLE-OP", "assisted": "NON-ASSISTED", "band": "ALL", "power": "LOW", "station": "FIXED" },
+      "exchangeTimeZone": "UTC",
+      "outputFormat": "cabrillo-3.0",
+      "qsos": [
+        { "id": 1795830000000, "call": "JA2AAA", "band": "14", "mode": "CW", "frequencyKHz": 14025, "srst": "599", "rrst": "599", "sentNumber": "25", "receivedNumber": "05", "contactedStation": { "dxccEntity": "K", "cqZone": 5, "continent": "NA" } }
+      ],
+      "expectedScore": { "qsoPoints": 3, "multiplierCount": 2, "total": 6 }
+    },
+    {
+      "profileId": "cq-ww-dx-ssb-2026",
+      "category": { "categoryLabel": "single operator, all band, low power" },
+      "cabrilloCategory": { "operator": "SINGLE-OP", "assisted": "NON-ASSISTED", "band": "ALL", "power": "LOW", "station": "FIXED" },
+      "exchangeTimeZone": "UTC",
+      "outputFormat": "cabrillo-3.0",
+      "qsos": [
+        { "id": 1792810000000, "call": "JA2AAA", "band": "14", "mode": "SSB", "frequencyKHz": 14250, "srst": "59", "rrst": "59", "sentNumber": "25", "receivedNumber": "05", "contactedStation": { "dxccEntity": "K", "cqZone": 5, "continent": "NA" } }
+      ],
+      "expectedScore": { "qsoPoints": 3, "multiplierCount": 2, "total": 6 }
+    },
+    {
+      "profileId": "all-saitama-2026",
+      "category": { "categoryCode": "S-S7", "categoryLabel": "Saitama station, single operator 7 MHz" },
+      "exchangeTimeZone": "Asia/Tokyo",
+      "outputFormat": "jarl-r2.1",
+      "qsos": [
+        { "id": 1768179600000, "call": "JA1AAA", "band": "7", "mode": "CW", "srst": "599", "rrst": "599", "sentNumber": "13001", "receivedNumber": "13002", "contactedStation": { "domesticMultiplier": "13002" } }
+      ],
+      "expectedScore": { "qsoPoints": 3, "multiplierCount": 1, "total": 3 }
+    },
+    {
+      "profileId": "daitoshi-2026",
+      "category": { "categoryLabel": "individual single band 7 MHz" },
+      "exchangeTimeZone": "Asia/Tokyo",
+      "outputFormat": "jarl-r1.0",
+      "qsos": [
+        { "id": 1773990000000, "call": "JA2AAA", "band": "7", "mode": "CW", "srst": "599", "rrst": "599", "sentNumber": "100116", "receivedNumber": "100117", "contactedStation": { "domesticMultiplier": "100117" } }
+      ],
+      "expectedScore": { "qsoPoints": 1, "multiplierCount": 1, "total": 1 }
+    }
+  ],
+  "validationExamples": [
+    { "profileId": "all-ja1-2026", "qsoId": 1782536400000, "expectedIssue": "outside-active-category-window", "reason": "The QSO is in the event envelope but the 15:00-16:00 JST gap is not an active category window." },
+    { "profileId": "cq-ww-dx-cw-2026", "qsoId": 1795830000000, "expectedIssue": "missing-frequency", "reason": "Cabrillo generation must not infer a frequency from the band." },
+    { "profileId": "all-asian-dx-cw-2026", "qsoId": 1781920000000, "expectedIssue": "unknown-dxcc-entity", "reason": "Unresolved entity/continent data cannot be scored as a multiplier." },
+    { "profileId": "all-ja-2026", "qsoId": 1777122000000, "expectedIssue": "missing-received-number", "reason": "The old memo field is not copied into a contest exchange number." }
+  ]
+}

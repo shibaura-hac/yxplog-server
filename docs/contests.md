@@ -16,6 +16,7 @@ Contests are files saved as json data in the following format:
 }
 ```
 
+The 2026 contest rule profiles, scoring inputs, time units, submission summary fields, and JARL/Cabrillo output contract are documented in [contest-spec.md](./contest-spec.md). Shared TypeScript request and result types are in `src/contest_types.ts`.
 For filename, generate UUID each time the user defines a contest.
 
 ## User Interface
